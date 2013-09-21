@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Open Screen View Controller - Select a DJ-->
+        <!--Requesta View Controller - Select a DJ-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="OpenScreenViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="RequestaViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -18,10 +18,6 @@
                                     <constraint firstAttribute="width" constant="320" id="KN1-iD-AP9"/>
                                     <constraint firstAttribute="height" constant="421" id="atg-u3-S2h"/>
                                 </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="2" id="1n1-qi-Sxi"/>
-                                    <outlet property="delegate" destination="2" id="dd6-aN-d9D"/>
-                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2s-EZ-e6A">
                                 <constraints>
@@ -36,7 +32,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="GoToDJSignIn:" destination="2" eventType="touchUpInside" id="5Tj-v8-0ct"/>
                                     <segue destination="Lh8-Y5-byF" kind="push" id="Oyr-Sf-rFi"/>
                                 </connections>
                             </button>
@@ -51,7 +46,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Select a DJ" id="9H8-qh-u4L"/>
                     <connections>
-                        <outlet property="DJSignInButton" destination="h2s-EZ-e6A" id="ERf-kn-lMK"/>
                         <segue destination="p5s-u5-4jI" kind="push" identifier="SelectDJToUserQueue" id="WUZ-RF-708"/>
                     </connections>
                 </viewController>
@@ -59,20 +53,16 @@
             </objects>
             <point key="canvasLocation" x="368" y="-11"/>
         </scene>
-        <!--User Requested Songs View Controller - Requested Songs-->
+        <!--View Controller - Requested Songs-->
         <scene sceneID="Lsb-fS-hWu">
             <objects>
-                <viewController id="p5s-u5-4jI" customClass="UserRequestedSongsViewController" sceneMemberID="viewController">
+                <viewController id="p5s-u5-4jI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zth-od-Ebp">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9ha-VX-k0r">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="p5s-u5-4jI" id="FNV-Ps-qzT"/>
-                                    <outlet property="delegate" destination="p5s-u5-4jI" id="qhx-LP-C5F"/>
-                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1S-Jf-rVf">
                                 <constraints>
@@ -87,7 +77,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="RequestNewSongAction:" destination="p5s-u5-4jI" eventType="touchUpInside" id="Gxg-HS-Dyu"/>
                                     <segue destination="OKH-TT-ZDr" kind="push" id="gHV-4G-tvJ"/>
                                 </connections>
                             </button>
@@ -104,77 +93,41 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Requested Songs" id="Bd6-Kz-dSc"/>
-                    <connections>
-                        <outlet property="RequestSongButton" destination="s1S-Jf-rVf" id="pvq-Kl-pSu"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OBp-Mb-Xrf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="795" y="-11"/>
         </scene>
-        <!--Request New Song View Controller - Request Song-->
+        <!--View Controller - Request Song-->
         <scene sceneID="U4N-YA-paP">
             <objects>
-                <viewController id="OKH-TT-ZDr" customClass="RequestNewSongViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jXe-xp-kEw" customClass="RequestNewSongViewControl">
+                <viewController id="OKH-TT-ZDr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jXe-xp-kEw">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bey-kW-aia">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bey-kW-aia">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ipc-w3-L9Y">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="OKH-TT-ZDr" id="6X4-ef-tMW"/>
-                                    <outlet property="delegate" destination="OKH-TT-ZDr" id="C3P-vp-BHH"/>
-                                </connections>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQr-pc-RlD">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="175" id="oYm-AN-Zl6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Search">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Search:" destination="OKH-TT-ZDr" eventType="touchUpInside" id="Efy-iJ-oXn"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QQr-pc-RlD" firstAttribute="top" secondItem="bey-kW-aia" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="2rS-8D-cvB"/>
                             <constraint firstItem="bey-kW-aia" firstAttribute="leading" secondItem="jXe-xp-kEw" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5Ed-eT-iO2"/>
-                            <constraint firstItem="ipc-w3-L9Y" firstAttribute="leading" secondItem="jXe-xp-kEw" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ILi-kK-3W4"/>
-                            <constraint firstItem="ipc-w3-L9Y" firstAttribute="top" secondItem="QQr-pc-RlD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Q9C-dC-uJY"/>
                             <constraint firstAttribute="trailing" secondItem="bey-kW-aia" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ipo-MQ-3qq"/>
-                            <constraint firstAttribute="trailing" secondItem="ipc-w3-L9Y" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="jfY-ol-Yxh"/>
                             <constraint firstItem="bey-kW-aia" firstAttribute="top" secondItem="jXe-xp-kEw" secondAttribute="top" constant="20" symbolic="YES" type="default" id="oH9-Us-7tM"/>
-                            <constraint firstItem="QQr-pc-RlD" firstAttribute="centerX" secondItem="bey-kW-aia" secondAttribute="centerX" type="default" id="rxn-8m-3WC"/>
-                            <constraint firstAttribute="bottom" secondItem="ipc-w3-L9Y" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="wSY-II-WC7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Request Song" id="gzu-tL-mHk"/>
-                    <connections>
-                        <outlet property="SearchButton" destination="QQr-pc-RlD" id="MLS-rn-12w"/>
-                        <outlet property="SearchTextField" destination="bey-kW-aia" id="nNb-oX-8fr"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HfA-EB-Gyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1342" y="-11"/>
         </scene>
-        <!--Sign In View Controller - DJ Sign in-->
+        <!--View Controller - DJ Sign in-->
         <scene sceneID="FIc-0Z-xqT">
             <objects>
-                <viewController id="Lh8-Y5-byF" customClass="DJSignInViewController" sceneMemberID="viewController">
+                <viewController id="Lh8-Y5-byF" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LVE-PY-Dda">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -203,7 +156,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="SignUpButtonPressed:" destination="Lh8-Y5-byF" eventType="touchUpInside" id="k4S-HN-lgT"/>
                                     <segue destination="RiX-KP-O8a" kind="push" id="l53-kD-Trh"/>
                                 </connections>
                             </button>
@@ -220,7 +172,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="SignInButtonPressed:" destination="Lh8-Y5-byF" eventType="touchUpInside" id="0JV-bU-rhA"/>
                                     <segue destination="YJc-Ll-Jmw" kind="push" id="pRd-V1-qEK"/>
                                 </connections>
                             </button>
@@ -257,10 +208,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="DJ Sign in" id="TDr-KX-5NJ"/>
-                    <connections>
-                        <outlet property="PasswordTextField" destination="cQW-Uo-Wph" id="P6N-Wy-BV7"/>
-                        <outlet property="UsernameTextField" destination="uYp-nV-0jE" id="Xkf-8R-F27"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c2z-0X-UTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -276,10 +223,6 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="sBH-Jm-9pU">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="YJc-Ll-Jmw" id="3sP-iu-WG2"/>
-                                    <outlet property="delegate" destination="YJc-Ll-Jmw" id="cvv-vm-S6r"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -416,39 +359,11 @@
         </scene>
     </scenes>
     <classes>
-        <class className="DJSignInViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DJSignInViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="SignInButtonPressed:"/>
-                <relationship kind="action" name="SignUpButtonPressed:"/>
-                <relationship kind="outlet" name="PasswordTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="UsernameTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
-        <class className="OpenScreenViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/OpenScreenViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="GoToDJSignIn:"/>
-                <relationship kind="outlet" name="DJSignInButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="RequestNewSongViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RequestNewSongViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="Search:"/>
-                <relationship kind="outlet" name="SearchButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="SearchTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="UserRequestedSongsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserRequestedSongsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="RequestNewSongAction:"/>
-                <relationship kind="outlet" name="RequestSongButton" candidateClass="UIButton"/>
-            </relationships>
+        <class className="RequestaViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RequestaViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
