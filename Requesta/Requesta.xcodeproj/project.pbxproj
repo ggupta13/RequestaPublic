@@ -55,11 +55,8 @@
 		EB86DA1C17EE2E7F0017E2C9 /* DJChoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA1B17EE2E7F0017E2C9 /* DJChoiceCell.xib */; };
 		EB86DA1F17EE2E990017E2C9 /* DJChoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA1E17EE2E980017E2C9 /* DJChoiceCell.m */; };
 		EB86DA2117EE33FE0017E2C9 /* CellBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA2017EE33FE0017E2C9 /* CellBackground.png */; };
-<<<<<<< HEAD
 		EB86DA2317EE35F40017E2C9 /* CellBackground2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA2217EE35F40017E2C9 /* CellBackground2.png */; };
 		EB86DA2617EE3B950017E2C9 /* UserVoteRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA2517EE3B950017E2C9 /* UserVoteRequestCell.m */; };
-=======
->>>>>>> 024d1f11c6eac222df929b039d431bbed2b2bcb0
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -275,6 +272,7 @@
 		ACDD6CCF17EDF0AE00EEDC5C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EB86DA2217EE35F40017E2C9 /* CellBackground2.png */,
 				ACDD6CD017EDF0AE00EEDC5C /* close.png */,
 				EB86DA2017EE33FE0017E2C9 /* CellBackground.png */,
 				ACDD6CD117EDF0AE00EEDC5C /* close@2x.png */,
@@ -387,9 +385,7 @@
 				ACDD6CFA17EDF72A00EEDC5C /* SIAlertView.bundle in Resources */,
 				EB86DA1C17EE2E7F0017E2C9 /* DJChoiceCell.xib in Resources */,
 				EB86DA2117EE33FE0017E2C9 /* CellBackground.png in Resources */,
-
 				EB86DA2317EE35F40017E2C9 /* CellBackground2.png in Resources */,
-
 				ACDD6D0E17EE37DB00EEDC5C /* eurostile.TTF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
