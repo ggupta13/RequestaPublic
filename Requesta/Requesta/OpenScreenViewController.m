@@ -52,6 +52,9 @@
         UserSongsRequestedViewController *controller = segue.destinationViewController;
         controller.chosenDJ=[self.listOfDJs objectAtIndex:self.chosenRow];
         [Singleton sharedInstance].currentDeejay = (DeeJay *) [self.listOfDJs objectAtIndex:self.chosenRow];
+        DeeJay *aa = (DeeJay *)[self.listOfDJs objectAtIndex:self.chosenRow];
+        [Singleton sharedInstance].currRequestedSongs = aa.requestedSongs;
+        
         //NSLog(@"in here, sending: %@",[self.listOfDJs objectAtIndex:self.chosenRow]);
     }
 }
@@ -121,11 +124,11 @@
                                 //artist,md5,songname,songid,votes
                                 if(count2==0)
                                     s.artist = [child3.value description];
-                                else if(count2==2)
+                                else if(count2==1)
                                     s.songName  = [child3.value description];
-                                else if(count2==3)
+                                else if(count2==2)
                                     s.song_id  = [child3.value description];
-                                else if(count2==4)
+                                else if(count2==3)
                                     s.votes = [child3.value integerValue];
                                 
                                 count2++;

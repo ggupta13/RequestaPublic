@@ -13,5 +13,6 @@
 
 + (Singleton *)sharedInstance;
 @property (nonatomic,retain) DeeJay *currentDeejay;
+@property (nonatomic,retain) NSMutableArray *currRequestedSongs;
 
 @end

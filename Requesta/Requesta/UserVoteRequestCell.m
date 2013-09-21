@@ -7,6 +7,10 @@
 //
 
 #import "UserVoteRequestCell.h"
+#import "Singleton.h"
+#import "Song.h"
+#import <Firebase/Firebase.h>
+#import "RequestaAppDelegate.h"
 
 @implementation UserVoteRequestCell
 
@@ -28,14 +32,134 @@
     // Configure the view for the selected state
 }
 
+-(void)voteSong:(Song *)song forDJNickname:(NSString *)nickname realName:(NSString *)realName
+{
+    Firebase *f = [[Firebase alloc]initWithUrl:@"https://requesta.firebaseio.com/DJProfiles"];
+    
+    
+    __block BOOL alreadyRequested = NO;
+    [f observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot)
+     {
+         //NSLog(alreadyRequested ? @"Yes" : @"No");
+         if(!alreadyRequested)
+         {
+             BOOL found=NO;
+             for(FDataSnapshot *child in snapshot.children)
+             {
+                 int count=0;
+                 NSString *childNickname=@"",*childRealName=@"",*location=@"";
+                 
+                 NSString *currName = child.name;
+                 for(FDataSnapshot *child2 in child.children)
+                 {
+                     if(count==0)
+                         location=[child2.value description];
+                     else if(count==1)
+                         childNickname =[child2.value description];
+                     else if(count==2)
+                         childRealName=[child2.value description];
+                     
+                     count++;
+                 }
+                 if([nickname isEqualToString:childNickname] && [realName isEqualToString:childRealName])
+                 {
+                     found=YES;
+                     NSLog(@"found DJ to vote song");
+                     NSString *path = [NSString stringWithFormat:@"https://requesta.firebaseio.com/DJProfiles/%@/requestedSongs",currName];
+                     Firebase *f2 = [[Firebase alloc]initWithUrl:path];
+                     
+                     __block BOOL already = NO;
+                     
+                     [f2 observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshotx)
+                      {
+                          if(!already)
+                          {
+                              NSString *songName=@"",*songArtist=@"",*song_id=@"";
+                              NSUInteger currVotes = 0;
+                              for(FDataSnapshot *childd in snapshotx.children)
+                              {
+                                  //NSLog(@"should be a song: %@",childd.name);
+                                  NSString *currSong = childd.name;
+                                  int count2=0;
+                                  for(FDataSnapshot *childd2 in childd.children)
+                                  {
+                                      if(count2==0)
+                                          songArtist = [childd2.value description];
+                                      else if(count2==1)
+                                          songName = [childd2.value description];
+                                      else if(count2==2)
+                                          song_id = [childd2.value description];
+                                      else if(count2==3)
+                                          currVotes = [childd2.value integerValue];
+                                      
+                                      count2++;
+                                  }
+                                  
+                                  NSLog(@"%@ %@ %@",songArtist,songName,song_id);
+                                  
+                                  if([song.artist isEqualToString:songArtist] &&
+                                     [song.songName isEqualToString:songName])
+                                  {
+                                      NSLog(@"found the song!");
+                                      NSString *path = [NSString stringWithFormat:@"https://requesta.firebaseio.com/DJProfiles/%@/requestedSongs/%@",currName,currSong];
+                                      Firebase *f3 = [[Firebase alloc]initWithUrl:path];
+                                      
+                                      __block BOOL already2 = NO;
+                                      
+                                      [f3 observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshotx2)
+                                       {
+                                           if(!already2)
+                                           {
+                                               [f3 updateChildValues:@{
+                                                @"artist":song.artist,
+                                                @"songName":song.songName,
+                                                @"song_id":song.song_id,
+                                                @"votes":[NSNumber numberWithInt:(currVotes +1)]
+                                                }];
+                                               
+                                               already2=YES;
+                                           }
+                                           
+                                       }];
+                                      
+                                  }
+                                  
+                              }
+                              
+                              
+                              already=YES;
+                          }
+                      }];
+                 }
+             }
+             if(!found)
+             {
+                 [RequestaAppDelegate showAlertViewWithTitle:@"Error" andText:@"DJ Not Found"];
+             }
+             
+             alreadyRequested=YES;
+         }
+         
+     }];
+    
+}
+
+
 - (IBAction)VoteArrowPressed:(id)sender {
     if(!self.hasBeenPressed)
     {
         self.hasBeenPressed = YES;
         [self.VoteArrow setBackgroundImage:[UIImage imageNamed: @"VoteArrowOrange.png"] forState: UIControlStateNormal];
-        int currentVotes = [self.VoteCountTextField.text integerValue];
+        /*int currentVotes = [self.VoteCountTextField.text integerValue];
         currentVotes++;
-        self.VoteCountTextField.text = [NSString stringWithFormat:@"%d",currentVotes];
+        self.VoteCountTextField.text = [NSString stringWithFormat:@"%d",currentVotes];*/
+        
+         NSIndexPath *myIndexPath = [(UITableView *)self.superview indexPathForCell: self];
+        
+        Song *s = [[Singleton sharedInstance].currRequestedSongs objectAtIndex:myIndexPath.row];
+        NSLog(@"name: %@",s.songName);
+        DeeJay *d = [Singleton sharedInstance].currentDeejay;
+        [self voteSong:s forDJNickname:d.nickname realName:d.realName];
     }
 }
 @end
