@@ -12,6 +12,7 @@
 #import "DeeJay.h"
 #import "MBProgressHUD.h"
 #import "Song.h"
+#import "Singleton.h"
 #import "DJChoiceCell.h"
 
 @interface OpenScreenViewController ()
@@ -50,6 +51,7 @@
         //in this segue
         UserSongsRequestedViewController *controller = segue.destinationViewController;
         controller.chosenDJ=[self.listOfDJs objectAtIndex:self.chosenRow];
+        [Singleton sharedInstance].currentDeejay = (DeeJay *) [self.listOfDJs objectAtIndex:self.chosenRow];
         //NSLog(@"in here, sending: %@",[self.listOfDJs objectAtIndex:self.chosenRow]);
     }
 }
@@ -119,8 +121,6 @@
                                 //artist,md5,songname,songid,votes
                                 if(count2==0)
                                     s.artist = [child3.value description];
-                                else if(count2==1)
-                                    s.audio_md5 = [child3.value description];
                                 else if(count2==2)
                                     s.songName  = [child3.value description];
                                 else if(count2==3)

@@ -26,7 +26,6 @@
     Song *s = [[Song alloc]init];
     s.songName = @"Ashley";
     s.song_id = @"NOTREALIDBUTHASH";
-    s.audio_md5 = @"NOTREALHASHBUTWILLBE";
     s.votes=0;
     s.artist=@"Big Sean";
     //[self requestSongForDJ:s nickname:@"Kid_Curi" realName:@"Yash Sharma"];
@@ -103,8 +102,7 @@
                               NSLog(@"%@ %@ %@",songArtist,audio_md5,songName);
                               
                                   if([song.artist isEqualToString:songArtist] &&
-                                     [song.songName isEqualToString:songName] &&
-                                     [song.audio_md5 isEqualToString:audio_md5])
+                                     [song.songName isEqualToString:songName])
                                   {
                                       NSLog(@"found the song!");
                                       NSString *path = [NSString stringWithFormat:@"https://requesta.firebaseio.com/DJProfiles/%@/requestedSongs/%@",currName,currSong];
@@ -118,7 +116,6 @@
                                            {
                                                [f3 updateChildValues:@{
                                                 @"artist":song.artist,
-                                                @"audio_md5":song.audio_md5,
                                                 @"songName":song.songName,
                                                 @"song_id":song.song_id,
                                                 @"votes":[NSNumber numberWithInt:(currVotes +1)]
@@ -177,74 +174,6 @@
     alertView.transitionStyle = SIAlertViewTransitionStyleBounce;
     
     [alertView show];
-}
-
--(void)requestSongForDJ:(Song *)song nickname:(NSString *)nickname realName:(NSString *)realName
-{
-    Firebase *f = [[Firebase alloc]initWithUrl:@"https://requesta.firebaseio.com/DJProfiles"];
-    
-    
-    __block BOOL alreadyRequested = NO;
-    [f observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot)
-    {
-        //NSLog(alreadyRequested ? @"Yes" : @"No");
-        if(!alreadyRequested)
-        {
-            BOOL found=NO;
-            for(FDataSnapshot *child in snapshot.children)
-            {
-                int count=0;
-                NSString *childNickname=@"",*childRealName=@"",*location=@"";
-                
-                NSString *currName = child.name;
-                for(FDataSnapshot *child2 in child.children)
-                {
-                    if(count==0)
-                        location=[child2.value description];
-                    else if(count==1)
-                        childNickname =[child2.value description];
-                    else if(count==2)
-                        childRealName=[child2.value description];
-                    
-                    count++;
-                }
-                if([nickname isEqualToString:childNickname] && [realName isEqualToString:childRealName])
-                {
-                    found=YES;
-                    NSLog(@"found DJ to request song");
-                    NSString *path = [NSString stringWithFormat:@"https://requesta.firebaseio.com/DJProfiles/%@/requestedSongs",currName];
-                    Firebase *f2 = [[Firebase alloc]initWithUrl:path];
-                    
-                    __block BOOL already = NO;
-                    
-                    [f2 observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshotx)
-                     {
-                         if(!already)
-                         {
-                                [f2 updateChildValues:@{[NSString stringWithFormat:@"%i",snapshotx.childrenCount]:@{
-                                 @"artist":song.artist,
-                                 @"audio_md5":song.audio_md5,
-                                 @"songName":song.songName,
-                                 @"song_id":song.song_id,
-                                 @"votes":[NSNumber numberWithInt: song.votes]
-                                 }}];
-                                 
-                                 already=YES;
-                         }
-
-                    }];
-                }
-            }
-            if(!found)
-            {
-                [RequestaAppDelegate showAlertViewWithTitle:@"Error" andText:@"DJ Not Found"];
-            }
-            
-            alreadyRequested=YES;
-        }
-        
-    }];
-    
 }
 
 

@@ -17,7 +17,9 @@
     dispatch_once(&onceToken, ^{
         sharedInstance = [[Singleton alloc] init];
         
+        
         // Do any other initialization stuff here
+        sharedInstance.currentDeejay = [[DeeJay alloc]init];
         
     });
     return sharedInstance;

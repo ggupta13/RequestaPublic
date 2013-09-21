@@ -13,7 +13,6 @@
 @property NSString *album;
 @property NSString *artist;
 @property NSString *songName;
-@property NSString *audio_md5;
 @property NSString *song_id;
 @property double danceability;
 @property double duration;

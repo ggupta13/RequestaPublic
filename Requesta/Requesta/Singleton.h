@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DeeJay.h"
 
 @interface Singleton : NSObject
 
 + (Singleton *)sharedInstance;
+@property (nonatomic,retain) DeeJay *currentDeejay;
 
 @end

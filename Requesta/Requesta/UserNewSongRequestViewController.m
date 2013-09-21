@@ -12,6 +12,7 @@
 #import "RequestaAppDelegate.h"
 #import "MBProgressHUD.h"
 #import "QuestionPanel.h"
+#import "Singleton.h"
 
 @interface UserNewSongRequestViewController ()
 @property MBProgressHUD *hud;
@@ -46,7 +47,7 @@
     Song *s = [[Song alloc]init];
     s.songName = @"Beauty2222";
     s.song_id = @"willbechanged";
-    s.audio_md5 = @"willbereal";
+    
     s.votes=0;
     s.artist=@"JBiebs";
 
@@ -85,6 +86,7 @@
                  {
                      found=YES;
                      NSLog(@"found DJ to request song");
+                     NSLog(@"song data: %@ %@ %@ %i",song.artist,song.songName,song.song_id,song.votes);
                      NSString *path = [NSString stringWithFormat:@"https://requesta.firebaseio.com/DJProfiles/%@/requestedSongs",currName];
                      Firebase *f2 = [[Firebase alloc]initWithUrl:path];
                      
@@ -96,7 +98,6 @@
                           {
                               [f2 updateChildValues:@{[NSString stringWithFormat:@"%i",snapshotx.childrenCount]:@{
                                @"artist":song.artist,
-                               @"audio_md5":song.audio_md5,
                                @"songName":song.songName,
                                @"song_id":song.song_id,
                                @"votes":[NSNumber numberWithInt: song.votes]
@@ -210,17 +211,20 @@
     QuestionPanel *qPanel = [[QuestionPanel alloc] initWithFrame:frame];
     qPanel.delegate2 = self;
     qPanel.song = [self.searchResults objectAtIndex:indexPath.row];
-    //qPanel.djRealName =
+    qPanel.djRealName = [Singleton sharedInstance].currentDeejay.realName;
+    qPanel.djNickname = [Singleton sharedInstance].currentDeejay.nickname;
     [self.view addSubview:qPanel];
     [qPanel showFromPoint:self.view.center];
 }
+
+
 
 - (void) sendRequestForSong:(Song *)song nickname:(NSString *)nickname realName:(NSString *)realName
 {
     //SEND REQUEST!
     //NSString *typedFormatted = [song.songName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSLog(@"songid: %@",song.song_id);
-    NSString *url =  [NSString stringWithFormat:@"http://developer.echonest.com/api/v4/song/search?api_key=NS1ENIII2ZDJXWXNT&id=%@&bucket=audio_summary",song.song_id];
+    NSString *url =  [NSString stringWithFormat:@"http://developer.echonest.com/api/v4/song/profile?api_key=NS1ENIII2ZDJXWXNT&id=%@&bucket=audio_summary",song.song_id];
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:10   ];
     [req setHTTPMethod:@"GET"];
     NSData *lib;
@@ -244,6 +248,46 @@
              NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
              NSLog(@"dict: %@",dictionary);
              
+             NSEnumerator *enumerator = [[[dictionary objectForKey:@"response"]objectForKey:@"songs"] objectEnumerator];
+             id value;
+             while ((value = [enumerator nextObject]))
+             {
+                 Song *s = [[Song alloc]init];
+                 int count=0;
+                 id val;
+                 NSEnumerator *e = [value objectEnumerator];
+                 
+                 while((val=[e nextObject]))
+                 {
+                     if(count==2)
+                     {
+                         Song *s = [[Song alloc]init];
+                         s.songName = song.songName; s.song_id = song.song_id;
+                         s.artist = song.artist; s.votes = song.votes;
+                         for(NSString *key in val)
+                         {
+                             id value = [val objectForKey:key];
+                             NSLog(@"key: %@ and value: %@",key,value);
+                             if([key isEqualToString:@"tempo"])
+                                 s.tempo = [value doubleValue];
+                             else if([key isEqualToString:@"danceability"])
+                                 s.danceability = [value doubleValue];
+                             else if([key isEqualToString:@"energy"])
+                                 s.energy = [value doubleValue];
+                             else if([key isEqualToString:@"duration"])
+                                 s.duration = [value doubleValue];
+                             else if([key isEqualToString:@"loudness"])
+                                 s.loudness = [value doubleValue];
+                         }
+                         [self requestSongForDJ:s nickname:nickname realName:realName];
+                     }
+                     count++;
+                 }
+                 
+                 [self.searchResults addObject:s];
+             }
+             [self.hud hide:YES];
+             [self.SearchResultTableOutlet reloadData];
              
              [self.hud hide:YES];
          }
