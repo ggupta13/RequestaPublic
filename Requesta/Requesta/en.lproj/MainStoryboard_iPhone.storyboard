@@ -168,16 +168,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="23F-O5-ynw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0Z6-Xp-bsZ"/>
                             <constraint firstAttribute="bottom" secondItem="23F-O5-ynw" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="1Bx-aJ-DKq"/>
                             <constraint firstItem="bey-kW-aia" firstAttribute="leading" secondItem="jXe-xp-kEw" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5Ed-eT-iO2"/>
                             <constraint firstItem="RAo-hq-fE0" firstAttribute="leading" secondItem="jXe-xp-kEw" secondAttribute="leading" constant="21" id="5c2-qd-fyw"/>
                             <constraint firstItem="2jK-aQ-lfZ" firstAttribute="centerX" secondItem="bey-kW-aia" secondAttribute="centerX" type="default" id="5hV-qt-OWQ"/>
                             <constraint firstItem="RAo-hq-fE0" firstAttribute="top" secondItem="jXe-xp-kEw" secondAttribute="top" constant="4" id="BoZ-nY-xmc"/>
-                            <constraint firstItem="23F-O5-ynw" firstAttribute="leading" secondItem="jXe-xp-kEw" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="HaR-MY-Lsc"/>
                             <constraint firstItem="2jK-aQ-lfZ" firstAttribute="top" secondItem="jXe-xp-kEw" secondAttribute="top" constant="82" id="dUg-WC-U2n"/>
                             <constraint firstAttribute="trailing" secondItem="bey-kW-aia" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ipo-MQ-3qq"/>
                             <constraint firstItem="bey-kW-aia" firstAttribute="top" secondItem="jXe-xp-kEw" secondAttribute="top" constant="41" id="kTt-pL-iE5"/>
+                            <constraint firstItem="23F-O5-ynw" firstAttribute="leading" secondItem="jXe-xp-kEw" secondAttribute="leading" type="default" id="vIt-2j-fxI"/>
+                            <constraint firstItem="23F-O5-ynw" firstAttribute="trailing" secondItem="jXe-xp-kEw" secondAttribute="trailing" type="default" id="w9X-Dm-h49"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Request Song" id="gzu-tL-mHk"/>
@@ -459,6 +459,58 @@
             <point key="canvasLocation" x="-158" y="-11"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="DJLoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DJLoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="LoginButtonPressed:"/>
+                <relationship kind="outlet" name="PasswordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="UsernameTextFieldOutlet" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="DJSignUpViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DJSignUpViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="SignUpButtonPressed:"/>
+                <relationship kind="outlet" name="DJNameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="LocationTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="PasswordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="RealNameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="DJSongRequestViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DJSongRequestViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="SongRequestTableOutlet" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="OpenScreenViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OpenScreenViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="DJSignInButtonPressed:"/>
+                <relationship kind="outlet" name="SelectDJTableViewOutlet" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="UserNewSongRequestViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserNewSongRequestViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="SearchButtonPressed:"/>
+                <relationship kind="action" name="cancelPressed:"/>
+                <relationship kind="outlet" name="MusicSearchTextFieldOutlet" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="SearchResultTableOutlet" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="UserSongsRequestedViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserSongsRequestedViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="RequestNewSongButtonPressed:"/>
+                <relationship kind="outlet" name="UserSongRequestedTableOutlet" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

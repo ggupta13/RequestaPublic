@@ -32,7 +32,7 @@
     if(!self.hasBeenPressed)
     {
         self.hasBeenPressed = YES;
-        [self.VoteArrow setBackgroundImage:[UIImage imageNamed: @"VoteArrowOrange.png"] forState: UIControlStateNormal];
+        [self.VoteArrow setImage:[UIImage imageNamed: @"VoteArrowOrange.png"] forState: UIControlStateNormal];
         int currentVotes = [self.VoteCountTextField.text integerValue];
         currentVotes++;
         self.VoteCountTextField.text = [NSString stringWithFormat:@"%d",currentVotes];

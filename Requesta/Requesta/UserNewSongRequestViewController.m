@@ -13,6 +13,7 @@
 #import "MBProgressHUD.h"
 #import "QuestionPanel.h"
 #import "Singleton.h"
+#import "SongSearchCell.h"
 
 @interface UserNewSongRequestViewController ()
 @property MBProgressHUD *hud;
@@ -299,14 +300,24 @@
 {
     static NSString *simpleTableIdentifier = @"SimpleTableItem";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    SongSearchCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell = [[SongSearchCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier: simpleTableIdentifier];
     }
     
     Song *s = (Song *)[self.searchResults objectAtIndex:indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",s.songName,s.artist];
+    
+    cell.SongTitleTextField.text = s.songName;
+    cell.SongTitleTextField.font = [UIFont fontWithName:@"Eurostile" size:27.0f];
+    
+    cell.ArtistTextField.text = s.artist;
+    cell.ArtistTextField.font = [UIFont fontWithName:@"Eurostile" size:20.0f];
+    //cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",s.songName,s.artist];
     return cell;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 70;
 }
 @end
