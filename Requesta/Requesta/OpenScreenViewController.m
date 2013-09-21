@@ -65,6 +65,7 @@
     
     DeeJay *d = (DeeJay *)[self.listOfDJs objectAtIndex:indexPath.row];
     cell.textLabel.text = d.nickname;
+    cell.textLabel.font = [UIFont fontWithName:@"Eurostile" size:15.0f];
     return cell;
 }
 

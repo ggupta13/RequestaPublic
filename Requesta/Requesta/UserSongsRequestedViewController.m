@@ -76,6 +76,7 @@
             if([self.chosenDJ.nickname isEqualToString:d.nickname] && [self.chosenDJ.realName isEqualToString:d.realName])
             {
                 self.chosenDJ.requestedSongs = [[NSMutableArray alloc]initWithArray:d.requestedSongs];
+                [self.UserSongRequestedTableOutlet reloadData];
             }
         }
     }];
