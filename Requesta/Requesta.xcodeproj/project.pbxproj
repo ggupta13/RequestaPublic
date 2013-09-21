@@ -44,6 +44,7 @@
 		ACDD6D0517EE02B300EEDC5C /* FirebaseSimpleLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6D0417EE02B300EEDC5C /* FirebaseSimpleLogin.framework */; };
 		ACDD6D0717EE031C00EEDC5C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6D0617EE031C00EEDC5C /* Accounts.framework */; };
 		ACDD6D0917EE032000EEDC5C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6D0817EE032000EEDC5C /* Social.framework */; };
+		EB86D9FF17EE07000017E2C9 /* OpenScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86D9FE17EE07000017E2C9 /* OpenScreenViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +100,8 @@
 		ACDD6D0417EE02B300EEDC5C /* FirebaseSimpleLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseSimpleLogin.framework; sourceTree = "<group>"; };
 		ACDD6D0617EE031C00EEDC5C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		ACDD6D0817EE032000EEDC5C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		EB86D9FD17EE07000017E2C9 /* OpenScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenScreenViewController.h; sourceTree = "<group>"; };
+		EB86D9FE17EE07000017E2C9 /* OpenScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenScreenViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,8 @@
 				ACC7190617EDE49100F9833E /* RequestaAppDelegate.h */,
 				ACC7190717EDE49100F9833E /* RequestaAppDelegate.m */,
 				ACC7190F17EDE49100F9833E /* MainStoryboard_iPhone.storyboard */,
+				EB86D9FD17EE07000017E2C9 /* OpenScreenViewController.h */,
+				EB86D9FE17EE07000017E2C9 /* OpenScreenViewController.m */,
 				ACC7191217EDE49100F9833E /* MainStoryboard_iPad.storyboard */,
 				ACC7191517EDE49100F9833E /* RequestaViewController.h */,
 				ACC7191617EDE49100F9833E /* RequestaViewController.m */,
@@ -349,6 +354,7 @@
 				ACDD6CFB17EDF72A00EEDC5C /* SIAlertView.m in Sources */,
 				ACDD6D0017EDF7D600EEDC5C /* Singleton.m in Sources */,
 				ACDD6D0317EDF82A00EEDC5C /* Song.m in Sources */,
+				EB86D9FF17EE07000017E2C9 /* OpenScreenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
