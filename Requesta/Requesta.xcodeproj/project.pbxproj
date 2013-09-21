@@ -44,6 +44,7 @@
 		ACDD6D0517EE02B300EEDC5C /* FirebaseSimpleLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6D0417EE02B300EEDC5C /* FirebaseSimpleLogin.framework */; };
 		ACDD6D0717EE031C00EEDC5C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6D0617EE031C00EEDC5C /* Accounts.framework */; };
 		ACDD6D0917EE032000EEDC5C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6D0817EE032000EEDC5C /* Social.framework */; };
+		ACDD6D0C17EE27F400EEDC5C /* DeeJay.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6D0B17EE27F400EEDC5C /* DeeJay.m */; };
 		EB86D9FF17EE07000017E2C9 /* OpenScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86D9FE17EE07000017E2C9 /* OpenScreenViewController.m */; };
 		EB86DA0217EE0DF60017E2C9 /* UserSongsRequestedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0117EE0DF60017E2C9 /* UserSongsRequestedViewController.m */; };
 		EB86DA0517EE0ED30017E2C9 /* UserNewSongRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0417EE0ED30017E2C9 /* UserNewSongRequestViewController.m */; };
@@ -105,6 +106,8 @@
 		ACDD6D0417EE02B300EEDC5C /* FirebaseSimpleLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseSimpleLogin.framework; sourceTree = "<group>"; };
 		ACDD6D0617EE031C00EEDC5C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		ACDD6D0817EE032000EEDC5C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		ACDD6D0A17EE27F400EEDC5C /* DeeJay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeeJay.h; sourceTree = "<group>"; };
+		ACDD6D0B17EE27F400EEDC5C /* DeeJay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeeJay.m; sourceTree = "<group>"; };
 		EB86D9FD17EE07000017E2C9 /* OpenScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenScreenViewController.h; sourceTree = "<group>"; };
 		EB86D9FE17EE07000017E2C9 /* OpenScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenScreenViewController.m; sourceTree = "<group>"; };
 		EB86DA0017EE0DF60017E2C9 /* UserSongsRequestedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSongsRequestedViewController.h; sourceTree = "<group>"; };
@@ -179,6 +182,8 @@
 		ACC718FD17EDE49100F9833E /* Requesta */ = {
 			isa = PBXGroup;
 			children = (
+				ACDD6D0A17EE27F400EEDC5C /* DeeJay.h */,
+				ACDD6D0B17EE27F400EEDC5C /* DeeJay.m */,
 				EB86DA1217EE18670017E2C9 /* DJLoginViewController.h */,
 				EB86DA1317EE18670017E2C9 /* DJLoginViewController.m */,
 				ACDD6D0117EDF82A00EEDC5C /* Song.h */,
@@ -385,6 +390,7 @@
 				EB86DA0B17EE11390017E2C9 /* DJSongRequestViewController.m in Sources */,
 				EB86DA1417EE18670017E2C9 /* DJLoginViewController.m in Sources */,
 				EB86DA1717EE18F10017E2C9 /* DJSignUpViewController.m in Sources */,
+				ACDD6D0C17EE27F400EEDC5C /* DeeJay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
