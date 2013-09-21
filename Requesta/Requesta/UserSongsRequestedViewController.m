@@ -9,6 +9,7 @@
 #import "UserSongsRequestedViewController.h"
 #import "Song.h"
 #import <Firebase/Firebase.h>
+#import "UserVoteRequestCell.h"
 
 @interface UserSongsRequestedViewController ()
 
@@ -105,14 +106,17 @@
 {
     static NSString *simpleTableIdentifier = @"SimpleTableItem";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    UserVoteRequestCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell = [[UserVoteRequestCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier: simpleTableIdentifier];
     }
     
     Song *s = (Song *)[self.chosenDJ.requestedSongs objectAtIndex:indexPath.row];
-    cell.textLabel.text = s.songName;
+    cell.SongTitleTextField.text = s.songName;
+    cell.SongTitleTextField.font = [UIFont fontWithName:@"Eurostile" size:27.0f];
+    cell.ArtistTextField.text = s.artist;
+    cell.ArtistTextField.font = [UIFont fontWithName:@"Eurostile" size:20.0f];
     return cell;
 }
 
@@ -120,5 +124,7 @@
 {
     return self.chosenDJ.requestedSongs.count;//Number of cells
 }
+
+
 
 @end

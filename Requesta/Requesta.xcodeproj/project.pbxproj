@@ -58,6 +58,8 @@
 		EB86DA1F17EE2E990017E2C9 /* DJChoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA1E17EE2E980017E2C9 /* DJChoiceCell.m */; };
 		EB86DA2117EE33FE0017E2C9 /* CellBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA2017EE33FE0017E2C9 /* CellBackground.png */; };
 		EB86DA2617EE3B950017E2C9 /* UserVoteRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA2517EE3B950017E2C9 /* UserVoteRequestCell.m */; };
+		EB86DA2A17EE4A380017E2C9 /* UserVoteRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA2917EE4A380017E2C9 /* UserVoteRequestCell.xib */; };
+		EB86DA2C17EE4BCE0017E2C9 /* VoteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA2B17EE4BCE0017E2C9 /* VoteArrow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +140,8 @@
 		EB86DA2217EE35F40017E2C9 /* CellBackground2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CellBackground2.png; path = ../../../../../Desktop/CellBackground2.png; sourceTree = "<group>"; };
 		EB86DA2417EE3B950017E2C9 /* UserVoteRequestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserVoteRequestCell.h; sourceTree = "<group>"; };
 		EB86DA2517EE3B950017E2C9 /* UserVoteRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserVoteRequestCell.m; sourceTree = "<group>"; };
+		EB86DA2917EE4A380017E2C9 /* UserVoteRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserVoteRequestCell.xib; sourceTree = "<group>"; };
+		EB86DA2B17EE4BCE0017E2C9 /* VoteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VoteArrow.png; path = ../../../../../Desktop/VoteArrow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,11 +225,12 @@
 				EB86DA0417EE0ED30017E2C9 /* UserNewSongRequestViewController.m */,
 				EB86DA0017EE0DF60017E2C9 /* UserSongsRequestedViewController.h */,
 				EB86DA0117EE0DF60017E2C9 /* UserSongsRequestedViewController.m */,
+				EB86DA2417EE3B950017E2C9 /* UserVoteRequestCell.h */,
+				EB86DA2517EE3B950017E2C9 /* UserVoteRequestCell.m */,
+				EB86DA2917EE4A380017E2C9 /* UserVoteRequestCell.xib */,
 				EB86D9FD17EE07000017E2C9 /* OpenScreenViewController.h */,
 				EB86D9FE17EE07000017E2C9 /* OpenScreenViewController.m */,
 				EB86DA1B17EE2E7F0017E2C9 /* DJChoiceCell.xib */,
-				EB86DA2417EE3B950017E2C9 /* UserVoteRequestCell.h */,
-				EB86DA2517EE3B950017E2C9 /* UserVoteRequestCell.m */,
 				EB86DA1D17EE2E980017E2C9 /* DJChoiceCell.h */,
 				EB86DA1E17EE2E980017E2C9 /* DJChoiceCell.m */,
 				ACC7191217EDE49100F9833E /* MainStoryboard_iPad.storyboard */,
@@ -279,6 +284,7 @@
 		ACDD6CCF17EDF0AE00EEDC5C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EB86DA2B17EE4BCE0017E2C9 /* VoteArrow.png */,
 				EB86DA2217EE35F40017E2C9 /* CellBackground2.png */,
 				ACDD6CD017EDF0AE00EEDC5C /* close.png */,
 				EB86DA2017EE33FE0017E2C9 /* CellBackground.png */,
@@ -394,6 +400,8 @@
 				EB86DA2117EE33FE0017E2C9 /* CellBackground.png in Resources */,
 				ACDD6D0E17EE37DB00EEDC5C /* eurostile.TTF in Resources */,
 				ACDD6D1017EE43B900EEDC5C /* CellBackground2.png in Resources */,
+				EB86DA2A17EE4A380017E2C9 /* UserVoteRequestCell.xib in Resources */,
+				EB86DA2C17EE4BCE0017E2C9 /* VoteArrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
