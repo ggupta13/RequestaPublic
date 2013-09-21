@@ -12,6 +12,7 @@
 #import "DeeJay.h"
 #import "MBProgressHUD.h"
 #import "Song.h"
+#import "DJChoiceCell.h"
 
 @interface OpenScreenViewController ()
 @property MBProgressHUD *hud;
@@ -53,19 +54,29 @@
     }
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 70;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *simpleTableIdentifier = @"SimpleTableItem";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    DJChoiceCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    if(cell == nil
+       ) {
+        cell = [[DJChoiceCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier: simpleTableIdentifier];
+        
     }
     
+    
+
+    
     DeeJay *d = (DeeJay *)[self.listOfDJs objectAtIndex:indexPath.row];
-    cell.textLabel.text = d.nickname;
-    cell.textLabel.font = [UIFont fontWithName:@"Eurostile" size:15.0f];
+    cell.DJNameTextField.text = d.nickname;
+    cell.DJNameTextField.font = [UIFont fontWithName:@"Eurostile" size:27.0f];
+    cell.RealNameTextField.text = d.realName;
+    cell.RealNameTextField.font = [UIFont fontWithName:@"Eurostile" size:20.0f];
     return cell;
 }
 
