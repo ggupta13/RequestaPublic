@@ -37,6 +37,14 @@
 		ACDD6CED17EDF0AE00EEDC5C /* UARoundedRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CE117EDF0AE00EEDC5C /* UARoundedRectView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ACDD6CEF17EDF0BA00EEDC5C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6CEE17EDF0BA00EEDC5C /* QuartzCore.framework */; };
 		ACDD6CF217EDF0E400EEDC5C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CF117EDF0E400EEDC5C /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+
+
+		EB86D9F317EDF99F0017E2C9 /* UserRequestedSongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86D9F217EDF99F0017E2C9 /* UserRequestedSongsViewController.m */; };
+		EB86D9F617EDFA4B0017E2C9 /* RequestNewSongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86D9F517EDFA4B0017E2C9 /* RequestNewSongViewController.m */; };
+		EB86D9F917EDFB790017E2C9 /* OpenScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86D9F817EDFB790017E2C9 /* OpenScreenViewController.m */; };
+		EB86D9FC17EDFEB20017E2C9 /* DJSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86D9FB17EDFEB20017E2C9 /* DJSignInViewController.m */; };
+
+		ACDD6CF917EDF72A00EEDC5C /* PollMultChoicePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CF517EDF72A00EEDC5C /* PollMultChoicePanel.m */; };
 		ACDD6CFA17EDF72A00EEDC5C /* SIAlertView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6CF617EDF72A00EEDC5C /* SIAlertView.bundle */; };
 		ACDD6CFB17EDF72A00EEDC5C /* SIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CF817EDF72A00EEDC5C /* SIAlertView.m */; };
 		ACDD6D0017EDF7D600EEDC5C /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CFF17EDF7D600EEDC5C /* Singleton.m */; };
@@ -89,6 +97,17 @@
 		ACDD6CEE17EDF0BA00EEDC5C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ACDD6CF017EDF0E400EEDC5C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		ACDD6CF117EDF0E400EEDC5C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+
+		EB86D9F117EDF99F0017E2C9 /* UserRequestedSongsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRequestedSongsViewController.h; sourceTree = "<group>"; };
+		EB86D9F217EDF99F0017E2C9 /* UserRequestedSongsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRequestedSongsViewController.m; sourceTree = "<group>"; };
+		EB86D9F417EDFA4B0017E2C9 /* RequestNewSongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestNewSongViewController.h; sourceTree = "<group>"; };
+		EB86D9F517EDFA4B0017E2C9 /* RequestNewSongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestNewSongViewController.m; sourceTree = "<group>"; };
+		EB86D9F717EDFB790017E2C9 /* OpenScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenScreenViewController.h; sourceTree = "<group>"; };
+		EB86D9F817EDFB790017E2C9 /* OpenScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenScreenViewController.m; sourceTree = "<group>"; };
+		EB86D9FA17EDFEB20017E2C9 /* DJSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSignInViewController.h; sourceTree = "<group>"; };
+		EB86D9FB17EDFEB20017E2C9 /* DJSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJSignInViewController.m; sourceTree = "<group>"; };
+		ACDD6CF417EDF72A00EEDC5C /* PollMultChoicePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollMultChoicePanel.h; sourceTree = "<group>"; };
+		ACDD6CF517EDF72A00EEDC5C /* PollMultChoicePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollMultChoicePanel.m; sourceTree = "<group>"; };
 		ACDD6CF617EDF72A00EEDC5C /* SIAlertView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SIAlertView.bundle; sourceTree = "<group>"; };
 		ACDD6CF717EDF72A00EEDC5C /* SIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAlertView.h; sourceTree = "<group>"; };
 		ACDD6CF817EDF72A00EEDC5C /* SIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAlertView.m; sourceTree = "<group>"; };
@@ -168,6 +187,14 @@
 				ACC7190617EDE49100F9833E /* RequestaAppDelegate.h */,
 				ACC7190717EDE49100F9833E /* RequestaAppDelegate.m */,
 				ACC7190F17EDE49100F9833E /* MainStoryboard_iPhone.storyboard */,
+				EB86D9FA17EDFEB20017E2C9 /* DJSignInViewController.h */,
+				EB86D9FB17EDFEB20017E2C9 /* DJSignInViewController.m */,
+				EB86D9F717EDFB790017E2C9 /* OpenScreenViewController.h */,
+				EB86D9F817EDFB790017E2C9 /* OpenScreenViewController.m */,
+				EB86D9F417EDFA4B0017E2C9 /* RequestNewSongViewController.h */,
+				EB86D9F517EDFA4B0017E2C9 /* RequestNewSongViewController.m */,
+				EB86D9F117EDF99F0017E2C9 /* UserRequestedSongsViewController.h */,
+				EB86D9F217EDF99F0017E2C9 /* UserRequestedSongsViewController.m */,
 				ACC7191217EDE49100F9833E /* MainStoryboard_iPad.storyboard */,
 				ACC7191517EDE49100F9833E /* RequestaViewController.h */,
 				ACC7191617EDE49100F9833E /* RequestaViewController.m */,
@@ -346,6 +373,12 @@
 				ACDD6CEC17EDF0AE00EEDC5C /* UANoisyGradientBackground.m in Sources */,
 				ACDD6CED17EDF0AE00EEDC5C /* UARoundedRectView.m in Sources */,
 				ACDD6CF217EDF0E400EEDC5C /* MBProgressHUD.m in Sources */,
+
+				EB86D9F317EDF99F0017E2C9 /* UserRequestedSongsViewController.m in Sources */,
+				EB86D9F617EDFA4B0017E2C9 /* RequestNewSongViewController.m in Sources */,
+				EB86D9F917EDFB790017E2C9 /* OpenScreenViewController.m in Sources */,
+				EB86D9FC17EDFEB20017E2C9 /* DJSignInViewController.m in Sources */,
+				ACDD6CF917EDF72A00EEDC5C /* PollMultChoicePanel.m in Sources */,
 				ACDD6CFB17EDF72A00EEDC5C /* SIAlertView.m in Sources */,
 				ACDD6D0017EDF7D600EEDC5C /* Singleton.m in Sources */,
 				ACDD6D0317EDF82A00EEDC5C /* Song.m in Sources */,
