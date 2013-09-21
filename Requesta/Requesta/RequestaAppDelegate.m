@@ -9,6 +9,7 @@
 #import "RequestaAppDelegate.h"
 #import <Firebase/Firebase.h>
 #import "SIAlertView/SIAlertView.h"
+#import "Song.h"
 
 @implementation RequestaAppDelegate
 
@@ -21,6 +22,14 @@
     [f observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         NSLog(@"%@ -> %@", snapshot.name, snapshot.value);
     }];*/
+    
+    Song *s = [[Song alloc]init];
+    s.songName = @"Ashley";
+    s.song_id = @"NOTREALIDBUTHASH";
+    s.audio_md5 = @"NOTREALHASHBUTWILLBE";
+    s.votes=0;
+    s.artist=@"Big Sean";
+    [self requestSongForDJ:s nickname:@"Kid_Curi" realName:@"Yash Sharma"];
     
     return YES;
 }
@@ -51,6 +60,54 @@
     alertView.transitionStyle = SIAlertViewTransitionStyleBounce;
     
     [alertView show];
+}
+
+-(void)requestSongForDJ:(Song *)song nickname:(NSString *)nickname realName:(NSString *)realName
+{
+    Firebase *f = [[Firebase alloc]initWithUrl:@"https://requesta.firebaseio.com/DJProfiles"];
+    
+    
+    __block BOOL alreadyRequested = NO;
+    [f observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot)
+    {
+        if(!alreadyRequested)
+        {
+            BOOL found=NO;
+            for(FDataSnapshot *child in snapshot.children)
+            {
+                int count=0;
+                NSString *childNickname=@"",*childRealName=@"",*location=@"";
+                
+                NSString *currName = child.name;
+                for(FDataSnapshot *child2 in child.children)
+                {
+                    if(count==0)
+                        location=[child2.value description];
+                    else if(count==1)
+                        childNickname =[child2.value description];
+                    else if(count==2)
+                        childRealName=[child2.value description];
+                    
+                    count++;
+                }
+                if([nickname isEqualToString:childNickname] && [realName isEqualToString:childRealName])
+                {
+                    found=YES;
+                    //NSLog(@"found dJ");
+                    /*NSString *path = [NSString stringWithFormat:@"https://requesta.firebaseio.com/DJProfiles/%@/%@/requestedSongs",[school stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],[room stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];*/
+                    
+                }
+            }
+            if(!found)
+            {
+                [RequestaAppDelegate showAlertViewWithTitle:@"Error" andText:@"DJ Not Found"];
+            }
+            
+            alreadyRequested=YES;
+        }
+        
+    }];
+    
 }
 
 
