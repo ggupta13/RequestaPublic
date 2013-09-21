@@ -10,6 +10,7 @@
 
 @implementation UserVoteRequestCell
 
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -28,5 +29,13 @@
 }
 
 - (IBAction)VoteArrowPressed:(id)sender {
+    if(!self.hasBeenPressed)
+    {
+        self.hasBeenPressed = YES;
+        [self.VoteArrow setBackgroundImage:[UIImage imageNamed: @"VoteArrowOrange.png"] forState: UIControlStateNormal];
+        int currentVotes = [self.VoteCountTextField.text integerValue];
+        currentVotes++;
+        self.VoteCountTextField.text = [NSString stringWithFormat:@"%d",currentVotes];
+    }
 }
 @end

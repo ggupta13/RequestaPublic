@@ -117,6 +117,7 @@
     cell.ArtistTextField.font = [UIFont fontWithName:@"Eurostile" size:20.0f];
     cell.VoteCountTextField.text = @"0";
     cell.VoteCountTextField.font = [UIFont fontWithName:@"Eurostile" size:30.0f];
+    cell.hasBeenPressed = false;
     return cell;
 }
 
