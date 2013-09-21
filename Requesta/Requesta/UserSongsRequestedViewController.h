@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DeeJay.h"
 
 @interface UserSongsRequestedViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *UserSongRequestedTableOutlet;
 - (IBAction)RequestNewSongButtonPressed:(id)sender;
+
+@property DeeJay *chosenDJ;
 
 @end

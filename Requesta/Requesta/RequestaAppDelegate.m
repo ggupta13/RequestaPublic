@@ -30,7 +30,9 @@
     s.votes=0;
     s.artist=@"Big Sean";
     //[self requestSongForDJ:s nickname:@"Kid_Curi" realName:@"Yash Sharma"];
-    [self voteSong:s forDJNickname:@"Kid_Curi" realName:@"Yash Sharma"];
+    //[self voteSong:s forDJNickname:@"Kid_Curi" realName:@"Yash Sharma"];
+    
+     //[self requestSongForDJ:s nickname:@"GaganG" realName:@"Jon Brelje"];
     
     return YES;
 }

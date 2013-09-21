@@ -12,4 +12,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *SelectDJTableViewOutlet;
 - (IBAction)DJSignInButtonPressed:(id)sender;
 
+@property NSMutableArray *listOfDJs;
+
 @end
