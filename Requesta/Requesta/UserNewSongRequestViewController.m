@@ -209,6 +209,8 @@
     CGRect frame = CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.bounds.size.width, self.view.bounds.size.height * (6/8.));
     QuestionPanel *qPanel = [[QuestionPanel alloc] initWithFrame:frame];
     qPanel.delegate2 = self;
+    qPanel.song = [self.searchResults objectAtIndex:indexPath.row];
+    //qPanel.djRealName =
     [self.view addSubview:qPanel];
     [qPanel showFromPoint:self.view.center];
 }
@@ -216,7 +218,36 @@
 - (void) sendRequestForSong:(Song *)song nickname:(NSString *)nickname realName:(NSString *)realName
 {
     //SEND REQUEST!
+    //NSString *typedFormatted = [song.songName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"songid: %@",song.song_id);
+    NSString *url =  [NSString stringWithFormat:@"http://developer.echonest.com/api/v4/song/search?api_key=NS1ENIII2ZDJXWXNT&id=%@&bucket=audio_summary",song.song_id];
+    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:10   ];
+    [req setHTTPMethod:@"GET"];
+    NSData *lib;
+    [req setHTTPBody:lib];
     
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.labelText=@"Loading...";
+    
+    
+    [NSURLConnection sendAsynchronousRequest:req
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
+     {
+         if(error)
+         {
+             NSLog(@"error loading: %@",[error localizedDescription]);
+         }
+         else
+             
+         {
+             NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+             NSLog(@"dict: %@",dictionary);
+             
+             
+             [self.hud hide:YES];
+         }
+     }];
 }
 
 
