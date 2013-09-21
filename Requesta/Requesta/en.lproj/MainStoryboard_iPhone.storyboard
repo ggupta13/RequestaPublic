@@ -171,10 +171,10 @@
             </objects>
             <point key="canvasLocation" x="1342" y="-5"/>
         </scene>
-        <!--Sign In View Controller - DJ Sign in-->
+        <!--Login View Controller - DJ Sign in-->
         <scene sceneID="FIc-0Z-xqT">
             <objects>
-                <viewController id="Lh8-Y5-byF" customClass="DJSignInViewController" sceneMemberID="viewController">
+                <viewController id="Lh8-Y5-byF" customClass="DJLoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LVE-PY-Dda">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -203,24 +203,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="RiX-KP-O8a" kind="push" id="l53-kD-Trh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKD-BJ-4Ud">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="211" id="j99-qz-fzc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Sign in">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="SignInButtonPressed:" destination="Lh8-Y5-byF" eventType="touchUpInside" id="j4H-ZM-SoI"/>
-                                    <segue destination="YJc-Ll-Jmw" kind="push" id="pRd-V1-qEK"/>
+                                    <segue destination="RiX-KP-O8a" kind="push" id="RmV-Vt-CX9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Username:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2AJ-yw-0F4">
@@ -233,6 +216,22 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKD-BJ-4Ud">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="211" id="j99-qz-fzc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Log in">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="LoginButtonPressed:" destination="Lh8-Y5-byF" eventType="touchUpInside" id="sYi-5q-Snw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -257,9 +256,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="DJ Sign in" id="TDr-KX-5NJ"/>
                     <connections>
-                        <outlet property="PasswordTextFieldOutlet" destination="cQW-Uo-Wph" id="sG1-Of-EZo"/>
-                        <outlet property="SignUpButtonPressed" destination="zHJ-DN-G6b" id="lJa-ii-hN6"/>
-                        <outlet property="UsernameTextFieldOutlet" destination="uYp-nV-0jE" id="gQL-cn-sjH"/>
+                        <outlet property="PasswordTextField" destination="cQW-Uo-Wph" id="Man-Nv-BVc"/>
+                        <outlet property="UsernameTextFieldOutlet" destination="uYp-nV-0jE" id="kxw-dh-R7T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c2z-0X-UTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -271,7 +269,7 @@
             <objects>
                 <viewController id="YJc-Ll-Jmw" customClass="DJSongRequestViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5P2-lL-dvl">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="sBH-Jm-9pU">
@@ -359,7 +357,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="SignUpButtonPressed:" destination="RiX-KP-O8a" eventType="touchUpInside" id="4c9-q6-e9B"/>
+                                    <action selector="SignUpButtonPressed:" destination="RiX-KP-O8a" eventType="touchUpInside" id="tWM-wy-Xcx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -398,11 +396,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="DJ Sign Up" id="fSc-J6-1zb"/>
                     <connections>
-                        <outlet property="DJNameTextFieldOutlet" destination="mQ3-6c-1jz" id="8Hz-FA-Qt2"/>
-                        <outlet property="LocationTextFieldOutlet" destination="W4s-nc-84O" id="JT8-z0-sYV"/>
-                        <outlet property="PasswordTextFieldOutlet" destination="eB5-N2-peU" id="1J3-xr-4BZ"/>
-                        <outlet property="RealNameTextFieldOutlet" destination="5Sm-ky-zLY" id="jvb-HW-vpn"/>
-                        <outlet property="SignUpButtonPressed" destination="TPb-cn-7hK" id="YGR-8f-Ayd"/>
+                        <outlet property="DJNameTextField" destination="mQ3-6c-1jz" id="gAz-R2-BEI"/>
+                        <outlet property="LocationTextField" destination="W4s-nc-84O" id="KJP-Zr-AdI"/>
+                        <outlet property="PasswordTextField" destination="eB5-N2-peU" id="lVl-Cc-Aks"/>
+                        <outlet property="RealNameTextField" destination="5Sm-ky-zLY" id="Nd9-Kk-4lB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Yh-9V-sXV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -429,17 +426,22 @@
         </scene>
     </scenes>
     <classes>
+        <class className="DJLoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DJLoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="LoginButtonPressed:"/>
+                <relationship kind="outlet" name="PasswordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="UsernameTextFieldOutlet" candidateClass="UITextField"/>
+            </relationships>
+        </class>
         <class className="DJSignUpViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DJSignUpViewController.h"/>
             <relationships>
-                <relationship kind="action" name="SignInButtonPressed:"/>
                 <relationship kind="action" name="SignUpButtonPressed:"/>
-                <relationship kind="outlet" name="DJNameTextFieldOutlet" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="LocationTextFieldOutlet" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="PasswordTextFieldOutlet" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="RealNameTextFieldOutlet" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="SignUpButtonPressed" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="UsernameTextFieldOutlet" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="DJNameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="LocationTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="PasswordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="RealNameTextField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="DJSongRequestViewController" superclassName="UIViewController">

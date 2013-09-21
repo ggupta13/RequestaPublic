@@ -1,18 +1,18 @@
 //
-//  DJSignUpViewController.m
+//  DJLoginViewController.m
 //  Requesta
 //
 //  Created by Jonathan Brelje on 9/21/13.
 //  Copyright (c) 2013 JaganBreljGupta. All rights reserved.
 //
 
-#import "DJSignInViewController.h"
+#import "DJLoginViewController.h"
 
-@interface DJSignUpViewController ()
+@interface DJLoginViewController ()
 
 @end
 
-@implementation DJSignUpViewController
+@implementation DJLoginViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,8 +35,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)SignInButtonPressed:(id)sender {
-}
-- (IBAction)SignUpButtonPressed:(id)sender {
+- (IBAction)LoginButtonPressed:(id)sender
+{
+    NSLog(@"here");
 }
 @end

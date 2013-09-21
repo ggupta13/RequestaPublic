@@ -47,9 +47,9 @@
 		EB86D9FF17EE07000017E2C9 /* OpenScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86D9FE17EE07000017E2C9 /* OpenScreenViewController.m */; };
 		EB86DA0217EE0DF60017E2C9 /* UserSongsRequestedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0117EE0DF60017E2C9 /* UserSongsRequestedViewController.m */; };
 		EB86DA0517EE0ED30017E2C9 /* UserNewSongRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0417EE0ED30017E2C9 /* UserNewSongRequestViewController.m */; };
-		EB86DA0817EE106A0017E2C9 /* DJSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0717EE106A0017E2C9 /* DJSignInViewController.m */; };
 		EB86DA0B17EE11390017E2C9 /* DJSongRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0A17EE11390017E2C9 /* DJSongRequestViewController.m */; };
-		EB86DA0E17EE12650017E2C9 /* DJSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0D17EE12640017E2C9 /* DJSignUpViewController.m */; };
+		EB86DA1417EE18670017E2C9 /* DJLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA1317EE18670017E2C9 /* DJLoginViewController.m */; };
+		EB86DA1717EE18F10017E2C9 /* DJSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA1617EE18F10017E2C9 /* DJSignUpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,12 +111,12 @@
 		EB86DA0117EE0DF60017E2C9 /* UserSongsRequestedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSongsRequestedViewController.m; sourceTree = "<group>"; };
 		EB86DA0317EE0ED30017E2C9 /* UserNewSongRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserNewSongRequestViewController.h; sourceTree = "<group>"; };
 		EB86DA0417EE0ED30017E2C9 /* UserNewSongRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserNewSongRequestViewController.m; sourceTree = "<group>"; };
-		EB86DA0617EE106A0017E2C9 /* DJSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSignInViewController.h; sourceTree = "<group>"; };
-		EB86DA0717EE106A0017E2C9 /* DJSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJSignInViewController.m; sourceTree = "<group>"; };
 		EB86DA0917EE11390017E2C9 /* DJSongRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSongRequestViewController.h; sourceTree = "<group>"; };
 		EB86DA0A17EE11390017E2C9 /* DJSongRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJSongRequestViewController.m; sourceTree = "<group>"; };
-		EB86DA0C17EE12640017E2C9 /* DJSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSignUpViewController.h; sourceTree = "<group>"; };
-		EB86DA0D17EE12640017E2C9 /* DJSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJSignUpViewController.m; sourceTree = "<group>"; };
+		EB86DA1217EE18670017E2C9 /* DJLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DJLoginViewController.h; path = ../DJLoginViewController.h; sourceTree = "<group>"; };
+		EB86DA1317EE18670017E2C9 /* DJLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DJLoginViewController.m; path = ../DJLoginViewController.m; sourceTree = "<group>"; };
+		EB86DA1517EE18F10017E2C9 /* DJSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSignUpViewController.h; sourceTree = "<group>"; };
+		EB86DA1617EE18F10017E2C9 /* DJSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJSignUpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +179,8 @@
 		ACC718FD17EDE49100F9833E /* Requesta */ = {
 			isa = PBXGroup;
 			children = (
+				EB86DA1217EE18670017E2C9 /* DJLoginViewController.h */,
+				EB86DA1317EE18670017E2C9 /* DJLoginViewController.m */,
 				ACDD6D0117EDF82A00EEDC5C /* Song.h */,
 				ACDD6D0217EDF82A00EEDC5C /* Song.m */,
 				ACDD6CFE17EDF7D600EEDC5C /* Singleton.h */,
@@ -186,12 +188,10 @@
 				ACC7190617EDE49100F9833E /* RequestaAppDelegate.h */,
 				ACC7190717EDE49100F9833E /* RequestaAppDelegate.m */,
 				ACC7190F17EDE49100F9833E /* MainStoryboard_iPhone.storyboard */,
-				EB86DA0C17EE12640017E2C9 /* DJSignUpViewController.h */,
-				EB86DA0D17EE12640017E2C9 /* DJSignUpViewController.m */,
+				EB86DA1517EE18F10017E2C9 /* DJSignUpViewController.h */,
+				EB86DA1617EE18F10017E2C9 /* DJSignUpViewController.m */,
 				EB86DA0917EE11390017E2C9 /* DJSongRequestViewController.h */,
 				EB86DA0A17EE11390017E2C9 /* DJSongRequestViewController.m */,
-				EB86DA0617EE106A0017E2C9 /* DJSignInViewController.h */,
-				EB86DA0717EE106A0017E2C9 /* DJSignInViewController.m */,
 				EB86DA0317EE0ED30017E2C9 /* UserNewSongRequestViewController.h */,
 				EB86DA0417EE0ED30017E2C9 /* UserNewSongRequestViewController.m */,
 				EB86DA0017EE0DF60017E2C9 /* UserSongsRequestedViewController.h */,
@@ -382,9 +382,9 @@
 				EB86D9FF17EE07000017E2C9 /* OpenScreenViewController.m in Sources */,
 				EB86DA0217EE0DF60017E2C9 /* UserSongsRequestedViewController.m in Sources */,
 				EB86DA0517EE0ED30017E2C9 /* UserNewSongRequestViewController.m in Sources */,
-				EB86DA0817EE106A0017E2C9 /* DJSignInViewController.m in Sources */,
 				EB86DA0B17EE11390017E2C9 /* DJSongRequestViewController.m in Sources */,
-				EB86DA0E17EE12650017E2C9 /* DJSignUpViewController.m in Sources */,
+				EB86DA1417EE18670017E2C9 /* DJLoginViewController.m in Sources */,
+				EB86DA1717EE18F10017E2C9 /* DJSignUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

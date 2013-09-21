@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface DJSignUpViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *RealNameTextFieldOutlet;
-@property (weak, nonatomic) IBOutlet UITextField *DJNameTextFieldOutlet;
-@property (weak, nonatomic) IBOutlet UITextField *LocationTextFieldOutlet;
-@property (weak, nonatomic) IBOutlet UITextField *PasswordTextFieldOutlet;
-
+@property (weak, nonatomic) IBOutlet UITextField *RealNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *DJNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *LocationTextField;
+@property (weak, nonatomic) IBOutlet UITextField *PasswordTextField;
+- (IBAction)SignUpButtonPressed:(id)sender;
 
 @end
