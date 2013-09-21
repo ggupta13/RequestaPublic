@@ -31,6 +31,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    self.searchResults = [NSMutableArray new];
+    
     Song *s = [[Song alloc]init];
     s.songName = @"Beauty2222";
     s.song_id = @"willbechanged";
@@ -38,9 +40,6 @@
     s.votes=0;
     s.artist=@"JBiebs";
 
-    
-    //////////////// REMOVE THIS LATER //////////////////
-    [self requestSongForDJ:s nickname:@"Kid_Curi" realName:@"Yash Sharma"];
 }
 
 -(void)requestSongForDJ:(Song *)song nickname:(NSString *)nickname realName:(NSString *)realName
@@ -118,7 +117,59 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)SearchButtonPressed:(id)sender {
+- (IBAction)SearchButtonPressed:(id)sender
+{
+    self.searchResults = [NSMutableArray new];
+
+    NSString *typedFormatted = [self.MusicSearchTextFieldOutlet.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *url =  [NSString stringWithFormat:@"http://developer.echonest.com/api/v4/song/search?api_key=NS1ENIII2ZDJXWXNT&combined=%@&sort=song_hotttnesss-desc",typedFormatted];
+    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:10   ];
+    [req setHTTPMethod:@"GET"];
+    NSData *lib;
+    [req setHTTPBody:lib];
+    [NSURLConnection sendAsynchronousRequest:req
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
+     {
+         if(error)
+         {
+             NSLog(@"error loading: %@",[error localizedDescription]);
+         }
+         else
+             
+         {
+             NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+             //NSLog(@"dict: %@",dictionary);
+             
+             NSEnumerator *enumerator = [[[dictionary objectForKey:@"response"]objectForKey:@"songs"] objectEnumerator];
+             id value;
+             while ((value = [enumerator nextObject]))
+             {
+                 Song *s = [[Song alloc]init];
+                 int count=0;
+                 id val;
+                 NSEnumerator *e = [value objectEnumerator];
+                 
+                 while((val=[e nextObject]))
+                 {
+                     //NSLog(@"val: %@",val);
+                     if(count==0)
+                         s.artist = [val description];
+                     else if(count==1)
+                         s.song_id = [val description];
+                     else if(count==2)
+                         s.songName = [val description];
+                     
+                     count++;
+                 }
+                 
+                 [self.searchResults addObject:s];
+             }
+             [self.SearchResultTableOutlet reloadData];
+         }
+     }];
+    
+
 }
 
 - (IBAction)cancelPressed:(id)sender
@@ -128,7 +179,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return self.searchResults.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -141,7 +192,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = @"ya";
+    Song *s = (Song *)[self.searchResults objectAtIndex:indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",s.songName,s.artist];
     return cell;
 }
 @end

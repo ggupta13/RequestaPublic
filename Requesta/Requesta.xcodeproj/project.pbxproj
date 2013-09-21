@@ -46,6 +46,7 @@
 		ACDD6D0917EE032000EEDC5C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6D0817EE032000EEDC5C /* Social.framework */; };
 		ACDD6D0C17EE27F400EEDC5C /* DeeJay.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6D0B17EE27F400EEDC5C /* DeeJay.m */; };
 		ACDD6D0E17EE37DB00EEDC5C /* eurostile.TTF in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6D0D17EE37DB00EEDC5C /* eurostile.TTF */; };
+		ACDD6D1017EE43B900EEDC5C /* CellBackground2.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6D0F17EE43B900EEDC5C /* CellBackground2.png */; };
 		EB86D9FF17EE07000017E2C9 /* OpenScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86D9FE17EE07000017E2C9 /* OpenScreenViewController.m */; };
 		EB86DA0217EE0DF60017E2C9 /* UserSongsRequestedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0117EE0DF60017E2C9 /* UserSongsRequestedViewController.m */; };
 		EB86DA0517EE0ED30017E2C9 /* UserNewSongRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0417EE0ED30017E2C9 /* UserNewSongRequestViewController.m */; };
@@ -55,7 +56,6 @@
 		EB86DA1C17EE2E7F0017E2C9 /* DJChoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA1B17EE2E7F0017E2C9 /* DJChoiceCell.xib */; };
 		EB86DA1F17EE2E990017E2C9 /* DJChoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA1E17EE2E980017E2C9 /* DJChoiceCell.m */; };
 		EB86DA2117EE33FE0017E2C9 /* CellBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA2017EE33FE0017E2C9 /* CellBackground.png */; };
-		EB86DA2317EE35F40017E2C9 /* CellBackground2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA2217EE35F40017E2C9 /* CellBackground2.png */; };
 		EB86DA2617EE3B950017E2C9 /* UserVoteRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA2517EE3B950017E2C9 /* UserVoteRequestCell.m */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +115,7 @@
 		ACDD6D0A17EE27F400EEDC5C /* DeeJay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeeJay.h; sourceTree = "<group>"; };
 		ACDD6D0B17EE27F400EEDC5C /* DeeJay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeeJay.m; sourceTree = "<group>"; };
 		ACDD6D0D17EE37DB00EEDC5C /* eurostile.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = eurostile.TTF; sourceTree = "<group>"; };
+		ACDD6D0F17EE43B900EEDC5C /* CellBackground2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellBackground2.png; sourceTree = "<group>"; };
 		EB86D9FD17EE07000017E2C9 /* OpenScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenScreenViewController.h; sourceTree = "<group>"; };
 		EB86D9FE17EE07000017E2C9 /* OpenScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenScreenViewController.m; sourceTree = "<group>"; };
 		EB86DA0017EE0DF60017E2C9 /* UserSongsRequestedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSongsRequestedViewController.h; sourceTree = "<group>"; };
@@ -233,6 +234,7 @@
 		ACC718FE17EDE49100F9833E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ACDD6D0F17EE43B900EEDC5C /* CellBackground2.png */,
 				ACDD6CF317EDF72A00EEDC5C /* SIAlertView */,
 				ACDD6CF017EDF0E400EEDC5C /* MBProgressHUD.h */,
 				ACDD6CF117EDF0E400EEDC5C /* MBProgressHUD.m */,
@@ -385,8 +387,8 @@
 				ACDD6CFA17EDF72A00EEDC5C /* SIAlertView.bundle in Resources */,
 				EB86DA1C17EE2E7F0017E2C9 /* DJChoiceCell.xib in Resources */,
 				EB86DA2117EE33FE0017E2C9 /* CellBackground.png in Resources */,
-				EB86DA2317EE35F40017E2C9 /* CellBackground2.png in Resources */,
 				ACDD6D0E17EE37DB00EEDC5C /* eurostile.TTF in Resources */,
+				ACDD6D1017EE43B900EEDC5C /* CellBackground2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
