@@ -23,6 +23,20 @@
 		ACDD6CC617EDE79200EEDC5C /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6CC517EDE79200EEDC5C /* libicucore.dylib */; };
 		ACDD6CC817EDE79600EEDC5C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6CC717EDE79600EEDC5C /* CFNetwork.framework */; };
 		ACDD6CCA17EDE79A00EEDC5C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6CC917EDE79A00EEDC5C /* Security.framework */; };
+		ACDD6CE217EDF0AE00EEDC5C /* UIView+JMNoise.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CCE17EDF0AE00EEDC5C /* UIView+JMNoise.m */; };
+		ACDD6CE317EDF0AE00EEDC5C /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6CD017EDF0AE00EEDC5C /* close.png */; };
+		ACDD6CE417EDF0AE00EEDC5C /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6CD117EDF0AE00EEDC5C /* close@2x.png */; };
+		ACDD6CE517EDF0AE00EEDC5C /* modalButton-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6CD217EDF0AE00EEDC5C /* modalButton-selected.png */; };
+		ACDD6CE617EDF0AE00EEDC5C /* modalButton-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6CD317EDF0AE00EEDC5C /* modalButton-selected@2x.png */; };
+		ACDD6CE717EDF0AE00EEDC5C /* modalButton.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6CD417EDF0AE00EEDC5C /* modalButton.png */; };
+		ACDD6CE817EDF0AE00EEDC5C /* modalButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6CD517EDF0AE00EEDC5C /* modalButton@2x.png */; };
+		ACDD6CE917EDF0AE00EEDC5C /* UAModalPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CD817EDF0AE00EEDC5C /* UAModalPanel.m */; };
+		ACDD6CEA17EDF0AE00EEDC5C /* UATitledModalPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CDA17EDF0AE00EEDC5C /* UATitledModalPanel.m */; };
+		ACDD6CEB17EDF0AE00EEDC5C /* UAGradientBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CDD17EDF0AE00EEDC5C /* UAGradientBackground.m */; };
+		ACDD6CEC17EDF0AE00EEDC5C /* UANoisyGradientBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CDF17EDF0AE00EEDC5C /* UANoisyGradientBackground.m */; };
+		ACDD6CED17EDF0AE00EEDC5C /* UARoundedRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CE117EDF0AE00EEDC5C /* UARoundedRectView.m */; };
+		ACDD6CEF17EDF0BA00EEDC5C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6CEE17EDF0BA00EEDC5C /* QuartzCore.framework */; };
+		ACDD6CF217EDF0E400EEDC5C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CF117EDF0E400EEDC5C /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +61,27 @@
 		ACDD6CC517EDE79200EEDC5C /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		ACDD6CC717EDE79600EEDC5C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		ACDD6CC917EDE79A00EEDC5C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		ACDD6CCD17EDF0AE00EEDC5C /* UIView+JMNoise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JMNoise.h"; sourceTree = "<group>"; };
+		ACDD6CCE17EDF0AE00EEDC5C /* UIView+JMNoise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JMNoise.m"; sourceTree = "<group>"; };
+		ACDD6CD017EDF0AE00EEDC5C /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		ACDD6CD117EDF0AE00EEDC5C /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
+		ACDD6CD217EDF0AE00EEDC5C /* modalButton-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "modalButton-selected.png"; sourceTree = "<group>"; };
+		ACDD6CD317EDF0AE00EEDC5C /* modalButton-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "modalButton-selected@2x.png"; sourceTree = "<group>"; };
+		ACDD6CD417EDF0AE00EEDC5C /* modalButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modalButton.png; sourceTree = "<group>"; };
+		ACDD6CD517EDF0AE00EEDC5C /* modalButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "modalButton@2x.png"; sourceTree = "<group>"; };
+		ACDD6CD717EDF0AE00EEDC5C /* UAModalPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAModalPanel.h; sourceTree = "<group>"; };
+		ACDD6CD817EDF0AE00EEDC5C /* UAModalPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAModalPanel.m; sourceTree = "<group>"; };
+		ACDD6CD917EDF0AE00EEDC5C /* UATitledModalPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UATitledModalPanel.h; sourceTree = "<group>"; };
+		ACDD6CDA17EDF0AE00EEDC5C /* UATitledModalPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UATitledModalPanel.m; sourceTree = "<group>"; };
+		ACDD6CDC17EDF0AE00EEDC5C /* UAGradientBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAGradientBackground.h; sourceTree = "<group>"; };
+		ACDD6CDD17EDF0AE00EEDC5C /* UAGradientBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAGradientBackground.m; sourceTree = "<group>"; };
+		ACDD6CDE17EDF0AE00EEDC5C /* UANoisyGradientBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UANoisyGradientBackground.h; sourceTree = "<group>"; };
+		ACDD6CDF17EDF0AE00EEDC5C /* UANoisyGradientBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UANoisyGradientBackground.m; sourceTree = "<group>"; };
+		ACDD6CE017EDF0AE00EEDC5C /* UARoundedRectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UARoundedRectView.h; sourceTree = "<group>"; };
+		ACDD6CE117EDF0AE00EEDC5C /* UARoundedRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UARoundedRectView.m; sourceTree = "<group>"; };
+		ACDD6CEE17EDF0BA00EEDC5C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		ACDD6CF017EDF0E400EEDC5C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		ACDD6CF117EDF0E400EEDC5C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACDD6CEF17EDF0BA00EEDC5C /* QuartzCore.framework in Frameworks */,
 				ACDD6CCA17EDE79A00EEDC5C /* Security.framework in Frameworks */,
 				ACDD6CC817EDE79600EEDC5C /* CFNetwork.framework in Frameworks */,
 				ACDD6CC617EDE79200EEDC5C /* libicucore.dylib in Frameworks */,
@@ -70,6 +106,7 @@
 		ACC718EB17EDE49100F9833E = {
 			isa = PBXGroup;
 			children = (
+				ACDD6CEE17EDF0BA00EEDC5C /* QuartzCore.framework */,
 				ACDD6CC917EDE79A00EEDC5C /* Security.framework */,
 				ACDD6CC717EDE79600EEDC5C /* CFNetwork.framework */,
 				ACDD6CC517EDE79200EEDC5C /* libicucore.dylib */,
@@ -115,6 +152,9 @@
 		ACC718FE17EDE49100F9833E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ACDD6CF017EDF0E400EEDC5C /* MBProgressHUD.h */,
+				ACDD6CF117EDF0E400EEDC5C /* MBProgressHUD.m */,
+				ACDD6CCB17EDF0AE00EEDC5C /* Panel */,
 				ACC718FF17EDE49100F9833E /* Requesta-Info.plist */,
 				ACC7190017EDE49100F9833E /* InfoPlist.strings */,
 				ACC7190317EDE49100F9833E /* main.m */,
@@ -124,6 +164,63 @@
 				ACC7190D17EDE49100F9833E /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACDD6CCB17EDF0AE00EEDC5C /* Panel */ = {
+			isa = PBXGroup;
+			children = (
+				ACDD6CCC17EDF0AE00EEDC5C /* Categories */,
+				ACDD6CCF17EDF0AE00EEDC5C /* Images */,
+				ACDD6CD617EDF0AE00EEDC5C /* Panels */,
+				ACDD6CDB17EDF0AE00EEDC5C /* Views */,
+			);
+			path = Panel;
+			sourceTree = "<group>";
+		};
+		ACDD6CCC17EDF0AE00EEDC5C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				ACDD6CCD17EDF0AE00EEDC5C /* UIView+JMNoise.h */,
+				ACDD6CCE17EDF0AE00EEDC5C /* UIView+JMNoise.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		ACDD6CCF17EDF0AE00EEDC5C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				ACDD6CD017EDF0AE00EEDC5C /* close.png */,
+				ACDD6CD117EDF0AE00EEDC5C /* close@2x.png */,
+				ACDD6CD217EDF0AE00EEDC5C /* modalButton-selected.png */,
+				ACDD6CD317EDF0AE00EEDC5C /* modalButton-selected@2x.png */,
+				ACDD6CD417EDF0AE00EEDC5C /* modalButton.png */,
+				ACDD6CD517EDF0AE00EEDC5C /* modalButton@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		ACDD6CD617EDF0AE00EEDC5C /* Panels */ = {
+			isa = PBXGroup;
+			children = (
+				ACDD6CD717EDF0AE00EEDC5C /* UAModalPanel.h */,
+				ACDD6CD817EDF0AE00EEDC5C /* UAModalPanel.m */,
+				ACDD6CD917EDF0AE00EEDC5C /* UATitledModalPanel.h */,
+				ACDD6CDA17EDF0AE00EEDC5C /* UATitledModalPanel.m */,
+			);
+			path = Panels;
+			sourceTree = "<group>";
+		};
+		ACDD6CDB17EDF0AE00EEDC5C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ACDD6CDC17EDF0AE00EEDC5C /* UAGradientBackground.h */,
+				ACDD6CDD17EDF0AE00EEDC5C /* UAGradientBackground.m */,
+				ACDD6CDE17EDF0AE00EEDC5C /* UANoisyGradientBackground.h */,
+				ACDD6CDF17EDF0AE00EEDC5C /* UANoisyGradientBackground.m */,
+				ACDD6CE017EDF0AE00EEDC5C /* UARoundedRectView.h */,
+				ACDD6CE117EDF0AE00EEDC5C /* UARoundedRectView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +281,12 @@
 				ACC7190E17EDE49100F9833E /* Default-568h@2x.png in Resources */,
 				ACC7191117EDE49100F9833E /* MainStoryboard_iPhone.storyboard in Resources */,
 				ACC7191417EDE49100F9833E /* MainStoryboard_iPad.storyboard in Resources */,
+				ACDD6CE317EDF0AE00EEDC5C /* close.png in Resources */,
+				ACDD6CE417EDF0AE00EEDC5C /* close@2x.png in Resources */,
+				ACDD6CE517EDF0AE00EEDC5C /* modalButton-selected.png in Resources */,
+				ACDD6CE617EDF0AE00EEDC5C /* modalButton-selected@2x.png in Resources */,
+				ACDD6CE717EDF0AE00EEDC5C /* modalButton.png in Resources */,
+				ACDD6CE817EDF0AE00EEDC5C /* modalButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +300,13 @@
 				ACC7190417EDE49100F9833E /* main.m in Sources */,
 				ACC7190817EDE49100F9833E /* RequestaAppDelegate.m in Sources */,
 				ACC7191717EDE49100F9833E /* RequestaViewController.m in Sources */,
+				ACDD6CE217EDF0AE00EEDC5C /* UIView+JMNoise.m in Sources */,
+				ACDD6CE917EDF0AE00EEDC5C /* UAModalPanel.m in Sources */,
+				ACDD6CEA17EDF0AE00EEDC5C /* UATitledModalPanel.m in Sources */,
+				ACDD6CEB17EDF0AE00EEDC5C /* UAGradientBackground.m in Sources */,
+				ACDD6CEC17EDF0AE00EEDC5C /* UANoisyGradientBackground.m in Sources */,
+				ACDD6CED17EDF0AE00EEDC5C /* UARoundedRectView.m in Sources */,
+				ACDD6CF217EDF0E400EEDC5C /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
