@@ -117,6 +117,8 @@
     cell.SongTitleTextField.font = [UIFont fontWithName:@"Eurostile" size:27.0f];
     cell.ArtistTextField.text = s.artist;
     cell.ArtistTextField.font = [UIFont fontWithName:@"Eurostile" size:20.0f];
+    cell.VoteCountTextField.text = @"0";
+    cell.VoteCountTextField.font = [UIFont fontWithName:@"Eurostile" size:30.0f];
     return cell;
 }
 
@@ -125,6 +127,9 @@
     return self.chosenDJ.requestedSongs.count;//Number of cells
 }
 
-
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 70;
+}
 
 @end

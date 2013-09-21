@@ -92,9 +92,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="9ha-VX-k0r" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9SZ-Gg-GJP"/>
+                            <constraint firstItem="9ha-VX-k0r" firstAttribute="trailing" secondItem="Zth-od-Ebp" secondAttribute="trailing" type="default" id="Mx6-ZZ-7NW"/>
                             <constraint firstItem="s1S-Jf-rVf" firstAttribute="top" secondItem="9ha-VX-k0r" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ey5-ei-zZB"/>
-                            <constraint firstItem="9ha-VX-k0r" firstAttribute="leading" secondItem="Zth-od-Ebp" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fVi-kS-I5L"/>
+                            <constraint firstItem="9ha-VX-k0r" firstAttribute="leading" secondItem="Zth-od-Ebp" secondAttribute="leading" type="default" id="h8E-Wz-KU8"/>
                             <constraint firstAttribute="bottom" secondItem="s1S-Jf-rVf" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="jcy-3e-tOS"/>
                             <constraint firstItem="s1S-Jf-rVf" firstAttribute="leading" secondItem="Zth-od-Ebp" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="l1Q-IE-FIg"/>
                             <constraint firstAttribute="trailing" secondItem="s1S-Jf-rVf" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qhc-v3-qDf"/>
@@ -459,58 +459,6 @@
             <point key="canvasLocation" x="-158" y="-11"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="DJLoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DJLoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="LoginButtonPressed:"/>
-                <relationship kind="outlet" name="PasswordTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="UsernameTextFieldOutlet" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="DJSignUpViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DJSignUpViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="SignUpButtonPressed:"/>
-                <relationship kind="outlet" name="DJNameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="LocationTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="PasswordTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="RealNameTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="DJSongRequestViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DJSongRequestViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="SongRequestTableOutlet" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="OpenScreenViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/OpenScreenViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="DJSignInButtonPressed:"/>
-                <relationship kind="outlet" name="SelectDJTableViewOutlet" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="UserNewSongRequestViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserNewSongRequestViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="SearchButtonPressed:"/>
-                <relationship kind="action" name="cancelPressed:"/>
-                <relationship kind="outlet" name="MusicSearchTextFieldOutlet" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="SearchResultTableOutlet" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="UserSongsRequestedViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserSongsRequestedViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="RequestNewSongButtonPressed:"/>
-                <relationship kind="outlet" name="UserSongRequestedTableOutlet" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
