@@ -50,6 +50,9 @@
 		EB86DA0B17EE11390017E2C9 /* DJSongRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0A17EE11390017E2C9 /* DJSongRequestViewController.m */; };
 		EB86DA1417EE18670017E2C9 /* DJLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA1317EE18670017E2C9 /* DJLoginViewController.m */; };
 		EB86DA1717EE18F10017E2C9 /* DJSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA1617EE18F10017E2C9 /* DJSignUpViewController.m */; };
+		EB86DA1C17EE2E7F0017E2C9 /* DJChoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA1B17EE2E7F0017E2C9 /* DJChoiceCell.xib */; };
+		EB86DA1F17EE2E990017E2C9 /* DJChoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA1E17EE2E980017E2C9 /* DJChoiceCell.m */; };
+		EB86DA2117EE33FE0017E2C9 /* CellBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA2017EE33FE0017E2C9 /* CellBackground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +120,10 @@
 		EB86DA1317EE18670017E2C9 /* DJLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DJLoginViewController.m; path = ../DJLoginViewController.m; sourceTree = "<group>"; };
 		EB86DA1517EE18F10017E2C9 /* DJSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSignUpViewController.h; sourceTree = "<group>"; };
 		EB86DA1617EE18F10017E2C9 /* DJSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJSignUpViewController.m; sourceTree = "<group>"; };
+		EB86DA1B17EE2E7F0017E2C9 /* DJChoiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJChoiceCell.xib; sourceTree = "<group>"; };
+		EB86DA1D17EE2E980017E2C9 /* DJChoiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DJChoiceCell.h; path = ../DJChoiceCell.h; sourceTree = "<group>"; };
+		EB86DA1E17EE2E980017E2C9 /* DJChoiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DJChoiceCell.m; path = ../DJChoiceCell.m; sourceTree = "<group>"; };
+		EB86DA2017EE33FE0017E2C9 /* CellBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellBackground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +205,9 @@
 				EB86DA0117EE0DF60017E2C9 /* UserSongsRequestedViewController.m */,
 				EB86D9FD17EE07000017E2C9 /* OpenScreenViewController.h */,
 				EB86D9FE17EE07000017E2C9 /* OpenScreenViewController.m */,
+				EB86DA1B17EE2E7F0017E2C9 /* DJChoiceCell.xib */,
+				EB86DA1D17EE2E980017E2C9 /* DJChoiceCell.h */,
+				EB86DA1E17EE2E980017E2C9 /* DJChoiceCell.m */,
 				ACC7191217EDE49100F9833E /* MainStoryboard_iPad.storyboard */,
 				ACC7191517EDE49100F9833E /* RequestaViewController.h */,
 				ACC7191617EDE49100F9833E /* RequestaViewController.m */,
@@ -248,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				ACDD6CD017EDF0AE00EEDC5C /* close.png */,
+				EB86DA2017EE33FE0017E2C9 /* CellBackground.png */,
 				ACDD6CD117EDF0AE00EEDC5C /* close@2x.png */,
 				ACDD6CD217EDF0AE00EEDC5C /* modalButton-selected.png */,
 				ACDD6CD317EDF0AE00EEDC5C /* modalButton-selected@2x.png */,
@@ -356,6 +367,8 @@
 				ACDD6CE717EDF0AE00EEDC5C /* modalButton.png in Resources */,
 				ACDD6CE817EDF0AE00EEDC5C /* modalButton@2x.png in Resources */,
 				ACDD6CFA17EDF72A00EEDC5C /* SIAlertView.bundle in Resources */,
+				EB86DA1C17EE2E7F0017E2C9 /* DJChoiceCell.xib in Resources */,
+				EB86DA2117EE33FE0017E2C9 /* CellBackground.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +398,7 @@
 				EB86DA0B17EE11390017E2C9 /* DJSongRequestViewController.m in Sources */,
 				EB86DA1417EE18670017E2C9 /* DJLoginViewController.m in Sources */,
 				EB86DA1717EE18F10017E2C9 /* DJSignUpViewController.m in Sources */,
+				EB86DA1F17EE2E990017E2C9 /* DJChoiceCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
