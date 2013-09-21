@@ -10,9 +10,10 @@
 #import <Firebase/Firebase.h>
 #import "Song.h"
 #import "RequestaAppDelegate.h"
+#import "MBProgressHUD.h"
 
 @interface UserNewSongRequestViewController ()
-
+@property MBProgressHUD *hud;
 @end
 
 @implementation UserNewSongRequestViewController
@@ -31,6 +32,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    
+    
     Song *s = [[Song alloc]init];
     s.songName = @"Beauty2222";
     s.song_id = @"willbechanged";
@@ -39,8 +42,6 @@
     s.artist=@"JBiebs";
 
     
-    //////////////// REMOVE THIS LATER //////////////////
-    [self requestSongForDJ:s nickname:@"Kid_Curi" realName:@"Yash Sharma"];
 }
 
 -(void)requestSongForDJ:(Song *)song nickname:(NSString *)nickname realName:(NSString *)realName
@@ -118,7 +119,56 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)SearchButtonPressed:(id)sender {
+- (IBAction)SearchButtonPressed:(id)sender
+{
+    NSString *url =  @"http://developer.echonest.com/api/v4/song/search?api_key=NS1ENIII2ZDJXWXNT&format=json&title=all%20of%20me&sort=song_hotttnesss-desc";
+    
+    
+    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:10];
+    [req setHTTPMethod:@"GET"];
+    NSData *lib;
+    [req setHTTPBody:lib];
+    
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.labelText=@"Loading...";
+    
+    [NSURLConnection sendAsynchronousRequest:req
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
+     {
+         if(error)
+         {
+             NSLog(@"error loading: %@",[error localizedDescription]);
+         }
+         else
+         {
+             NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+             
+             NSEnumerator *enumerator = [[[dictionary objectForKey:@"response"]objectForKey:@"songs"] objectEnumerator];
+             id value;
+             
+             while ((value = [enumerator nextObject]))
+             {
+                 NSEnumerator *e = [value objectEnumerator];
+                 id val;
+                 Song *s = [[Song alloc]init];
+                 int count=0;
+                 while((val = [e nextObject]))
+                 {
+                     if(count==1)
+                         s.artist = [val description];
+                     else if(count==2)
+                         s.song_id = [val description];
+                     else if(count==3)
+                         s.songName = [val description];
+                     
+                     count++;
+                 }
+                 
+             }
+             
+         }
+     }];
 }
 
 - (IBAction)cancelPressed:(id)sender

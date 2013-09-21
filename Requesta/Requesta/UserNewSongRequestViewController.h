@@ -14,4 +14,6 @@
 - (IBAction)SearchButtonPressed:(id)sender;
 - (IBAction)cancelPressed:(id)sender;
 
+@property NSMutableArray *searchResults;
+
 @end
