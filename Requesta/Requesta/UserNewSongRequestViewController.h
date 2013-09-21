@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *MusicSearchTextFieldOutlet;
 @property (weak, nonatomic) IBOutlet UITableView *SearchResultTableOutlet;
 - (IBAction)SearchButtonPressed:(id)sender;
+- (IBAction)cancelPressed:(id)sender;
 
 @end
