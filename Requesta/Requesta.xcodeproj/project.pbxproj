@@ -37,12 +37,13 @@
 		ACDD6CED17EDF0AE00EEDC5C /* UARoundedRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CE117EDF0AE00EEDC5C /* UARoundedRectView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ACDD6CEF17EDF0BA00EEDC5C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6CEE17EDF0BA00EEDC5C /* QuartzCore.framework */; };
 		ACDD6CF217EDF0E400EEDC5C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CF117EDF0E400EEDC5C /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		ACDD6CF917EDF72A00EEDC5C /* PollMultChoicePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CF517EDF72A00EEDC5C /* PollMultChoicePanel.m */; };
 		ACDD6CFA17EDF72A00EEDC5C /* SIAlertView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6CF617EDF72A00EEDC5C /* SIAlertView.bundle */; };
 		ACDD6CFB17EDF72A00EEDC5C /* SIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CF817EDF72A00EEDC5C /* SIAlertView.m */; };
-		ACDD6CFD17EDF78E00EEDC5C /* FirebaseSimpleLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6CFC17EDF78E00EEDC5C /* FirebaseSimpleLogin.framework */; };
 		ACDD6D0017EDF7D600EEDC5C /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CFF17EDF7D600EEDC5C /* Singleton.m */; };
 		ACDD6D0317EDF82A00EEDC5C /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6D0217EDF82A00EEDC5C /* Song.m */; };
+		ACDD6D0517EE02B300EEDC5C /* FirebaseSimpleLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6D0417EE02B300EEDC5C /* FirebaseSimpleLogin.framework */; };
+		ACDD6D0717EE031C00EEDC5C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6D0617EE031C00EEDC5C /* Accounts.framework */; };
+		ACDD6D0917EE032000EEDC5C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6D0817EE032000EEDC5C /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,16 +89,16 @@
 		ACDD6CEE17EDF0BA00EEDC5C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ACDD6CF017EDF0E400EEDC5C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		ACDD6CF117EDF0E400EEDC5C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		ACDD6CF417EDF72A00EEDC5C /* PollMultChoicePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollMultChoicePanel.h; sourceTree = "<group>"; };
-		ACDD6CF517EDF72A00EEDC5C /* PollMultChoicePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollMultChoicePanel.m; sourceTree = "<group>"; };
 		ACDD6CF617EDF72A00EEDC5C /* SIAlertView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SIAlertView.bundle; sourceTree = "<group>"; };
 		ACDD6CF717EDF72A00EEDC5C /* SIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAlertView.h; sourceTree = "<group>"; };
 		ACDD6CF817EDF72A00EEDC5C /* SIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAlertView.m; sourceTree = "<group>"; };
-		ACDD6CFC17EDF78E00EEDC5C /* FirebaseSimpleLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseSimpleLogin.framework; sourceTree = "<group>"; };
 		ACDD6CFE17EDF7D600EEDC5C /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		ACDD6CFF17EDF7D600EEDC5C /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
 		ACDD6D0117EDF82A00EEDC5C /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
 		ACDD6D0217EDF82A00EEDC5C /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
+		ACDD6D0417EE02B300EEDC5C /* FirebaseSimpleLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseSimpleLogin.framework; sourceTree = "<group>"; };
+		ACDD6D0617EE031C00EEDC5C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		ACDD6D0817EE032000EEDC5C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACDD6D0917EE032000EEDC5C /* Social.framework in Frameworks */,
+				ACDD6D0717EE031C00EEDC5C /* Accounts.framework in Frameworks */,
 				ACDD6CEF17EDF0BA00EEDC5C /* QuartzCore.framework in Frameworks */,
 				ACDD6CCA17EDE79A00EEDC5C /* Security.framework in Frameworks */,
 				ACDD6CC817EDE79600EEDC5C /* CFNetwork.framework in Frameworks */,
@@ -113,7 +116,7 @@
 				ACC718FA17EDE49100F9833E /* Foundation.framework in Frameworks */,
 				ACC718FC17EDE49100F9833E /* CoreGraphics.framework in Frameworks */,
 				ACDD6CC417EDE78B00EEDC5C /* Firebase.framework in Frameworks */,
-				ACDD6CFD17EDF78E00EEDC5C /* FirebaseSimpleLogin.framework in Frameworks */,
+				ACDD6D0517EE02B300EEDC5C /* FirebaseSimpleLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +126,8 @@
 		ACC718EB17EDE49100F9833E = {
 			isa = PBXGroup;
 			children = (
+				ACDD6D0817EE032000EEDC5C /* Social.framework */,
+				ACDD6D0617EE031C00EEDC5C /* Accounts.framework */,
 				ACDD6CEE17EDF0BA00EEDC5C /* QuartzCore.framework */,
 				ACDD6CC917EDE79A00EEDC5C /* Security.framework */,
 				ACDD6CC717EDE79600EEDC5C /* CFNetwork.framework */,
@@ -144,7 +149,7 @@
 		ACC718F617EDE49100F9833E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ACDD6CFC17EDF78E00EEDC5C /* FirebaseSimpleLogin.framework */,
+				ACDD6D0417EE02B300EEDC5C /* FirebaseSimpleLogin.framework */,
 				ACDD6CC317EDE78B00EEDC5C /* Firebase.framework */,
 				ACC718F717EDE49100F9833E /* UIKit.framework */,
 				ACC718F917EDE49100F9833E /* Foundation.framework */,
@@ -249,8 +254,6 @@
 		ACDD6CF317EDF72A00EEDC5C /* SIAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				ACDD6CF417EDF72A00EEDC5C /* PollMultChoicePanel.h */,
-				ACDD6CF517EDF72A00EEDC5C /* PollMultChoicePanel.m */,
 				ACDD6CF617EDF72A00EEDC5C /* SIAlertView.bundle */,
 				ACDD6CF717EDF72A00EEDC5C /* SIAlertView.h */,
 				ACDD6CF817EDF72A00EEDC5C /* SIAlertView.m */,
@@ -343,7 +346,6 @@
 				ACDD6CEC17EDF0AE00EEDC5C /* UANoisyGradientBackground.m in Sources */,
 				ACDD6CED17EDF0AE00EEDC5C /* UARoundedRectView.m in Sources */,
 				ACDD6CF217EDF0E400EEDC5C /* MBProgressHUD.m in Sources */,
-				ACDD6CF917EDF72A00EEDC5C /* PollMultChoicePanel.m in Sources */,
 				ACDD6CFB17EDF72A00EEDC5C /* SIAlertView.m in Sources */,
 				ACDD6D0017EDF7D600EEDC5C /* Singleton.m in Sources */,
 				ACDD6D0317EDF82A00EEDC5C /* Song.m in Sources */,
