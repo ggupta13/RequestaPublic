@@ -11,5 +11,7 @@
 @interface RequestaAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
++ (void) showAlertViewWithTitle: (NSString *) title andText: (NSString *) text;
+
 
 @end

@@ -8,13 +8,13 @@
 
 #import "RequestaAppDelegate.h"
 #import <Firebase/Firebase.h>
+#import "SIAlertView/SIAlertView.h"
 
 @implementation RequestaAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [self addDJProfileWithNickname:@"GaganG" realName:@"Gaaaaa" location:@"MI"];
     
     /*Firebase *f = [[Firebase alloc]initWithUrl:@"https://requesta.firebaseio.com/DJProfiles"];
     // Read data and react to changes
@@ -24,6 +24,35 @@
     
     return YES;
 }
+
++ (void) showAlertViewWithTitle: (NSString *) title andText: (NSString *) text {
+    SIAlertView *alertView = [[SIAlertView alloc] initWithTitle:title andMessage:text];
+    
+    
+    [alertView addButtonWithTitle:@"OK"
+                             type:SIAlertViewButtonTypeDefault
+                          handler:^(SIAlertView *alert) {
+                              [alert dismissAnimated:YES];
+                          }];
+    
+    alertView.willShowHandler = ^(SIAlertView *alertView) {
+        NSLog(@"%@, willShowHandler", alertView);
+    };
+    alertView.didShowHandler = ^(SIAlertView *alertView) {
+        NSLog(@"%@, didShowHandler", alertView);
+    };
+    alertView.willDismissHandler = ^(SIAlertView *alertView) {
+        NSLog(@"%@, willDismissHandler", alertView);
+    };
+    alertView.didDismissHandler = ^(SIAlertView *alertView) {
+        NSLog(@"%@, didDismissHandler", alertView);
+    };
+    
+    alertView.transitionStyle = SIAlertViewTransitionStyleBounce;
+    
+    [alertView show];
+}
+
 
 -(void)addDJProfileWithNickname:(NSString *)nickname realName:(NSString *)realName location:(NSString *)location
 {
@@ -44,8 +73,6 @@
         }
         
     }];
-    
-    
 }
 					
 - (void)applicationWillResignActive:(UIApplication *)application
