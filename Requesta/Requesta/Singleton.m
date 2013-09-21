@@ -20,6 +20,7 @@
         
         // Do any other initialization stuff here
         sharedInstance.currentDeejay = [[DeeJay alloc]init];
+        sharedInstance.currRequestedSongs = [NSMutableArray new];
         
     });
     return sharedInstance;
