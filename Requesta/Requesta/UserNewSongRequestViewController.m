@@ -10,9 +10,11 @@
 #import <Firebase/Firebase.h>
 #import "Song.h"
 #import "RequestaAppDelegate.h"
+#import "MBProgressHUD.h"
+#import "QuestionPanel.h"
 
 @interface UserNewSongRequestViewController ()
-
+@property MBProgressHUD *hud;
 @end
 
 @implementation UserNewSongRequestViewController
@@ -26,12 +28,20 @@
     return self;
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self tapGesture];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
     self.searchResults = [NSMutableArray new];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture)];
+    [self.view addGestureRecognizer:tapGesture];
+    [tapGesture setCancelsTouchesInView:NO];
     
     Song *s = [[Song alloc]init];
     s.songName = @"Beauty2222";
@@ -117,16 +127,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) tapGesture
+{
+    [self.MusicSearchTextFieldOutlet resignFirstResponder];
+}
+
 - (IBAction)SearchButtonPressed:(id)sender
 {
     self.searchResults = [NSMutableArray new];
+    [self.MusicSearchTextFieldOutlet resignFirstResponder];
 
     NSString *typedFormatted = [self.MusicSearchTextFieldOutlet.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSString *url =  [NSString stringWithFormat:@"http://developer.echonest.com/api/v4/song/search?api_key=NS1ENIII2ZDJXWXNT&combined=%@&sort=song_hotttnesss-desc",typedFormatted];
+    NSString *url =  [NSString stringWithFormat:@"http://developer.echonest.com/api/v4/song/search?api_key=NS1ENIII2ZDJXWXNT&combined=%@&sort=song_hotttnesss-desc&results=100",typedFormatted];
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:10   ];
     [req setHTTPMethod:@"GET"];
     NSData *lib;
     [req setHTTPBody:lib];
+    
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.labelText=@"Loading...";
+
+    
     [NSURLConnection sendAsynchronousRequest:req
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
@@ -165,6 +186,7 @@
                  
                  [self.searchResults addObject:s];
              }
+             [self.hud hide:YES];
              [self.SearchResultTableOutlet reloadData];
          }
      }];
@@ -181,6 +203,22 @@
 {
     return self.searchResults.count;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGRect frame = CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.bounds.size.width, self.view.bounds.size.height * (6/8.));
+    QuestionPanel *qPanel = [[QuestionPanel alloc] initWithFrame:frame];
+    qPanel.delegate2 = self;
+    [self.view addSubview:qPanel];
+    [qPanel showFromPoint:self.view.center];
+}
+
+- (void) sendRequestForSong:(Song *)song nickname:(NSString *)nickname realName:(NSString *)realName
+{
+    //SEND REQUEST!
+    
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

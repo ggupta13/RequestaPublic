@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QuestionPanel.h"
 
-@interface UserNewSongRequestViewController : UIViewController
+@interface UserNewSongRequestViewController : UIViewController <QuestionPanelDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *MusicSearchTextFieldOutlet;
 @property (weak, nonatomic) IBOutlet UITableView *SearchResultTableOutlet;
 - (IBAction)SearchButtonPressed:(id)sender;

@@ -47,6 +47,7 @@
 		ACDD6D0C17EE27F400EEDC5C /* DeeJay.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6D0B17EE27F400EEDC5C /* DeeJay.m */; };
 		ACDD6D0E17EE37DB00EEDC5C /* eurostile.TTF in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6D0D17EE37DB00EEDC5C /* eurostile.TTF */; };
 		ACDD6D1017EE43B900EEDC5C /* CellBackground2.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6D0F17EE43B900EEDC5C /* CellBackground2.png */; };
+		ACDD6D1317EE4B9000EEDC5C /* QuestionPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6D1217EE4B9000EEDC5C /* QuestionPanel.m */; };
 		EB86D9FF17EE07000017E2C9 /* OpenScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86D9FE17EE07000017E2C9 /* OpenScreenViewController.m */; };
 		EB86DA0217EE0DF60017E2C9 /* UserSongsRequestedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0117EE0DF60017E2C9 /* UserSongsRequestedViewController.m */; };
 		EB86DA0517EE0ED30017E2C9 /* UserNewSongRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0417EE0ED30017E2C9 /* UserNewSongRequestViewController.m */; };
@@ -116,6 +117,8 @@
 		ACDD6D0B17EE27F400EEDC5C /* DeeJay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeeJay.m; sourceTree = "<group>"; };
 		ACDD6D0D17EE37DB00EEDC5C /* eurostile.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = eurostile.TTF; sourceTree = "<group>"; };
 		ACDD6D0F17EE43B900EEDC5C /* CellBackground2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellBackground2.png; sourceTree = "<group>"; };
+		ACDD6D1117EE4B9000EEDC5C /* QuestionPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionPanel.h; sourceTree = "<group>"; };
+		ACDD6D1217EE4B9000EEDC5C /* QuestionPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionPanel.m; sourceTree = "<group>"; };
 		EB86D9FD17EE07000017E2C9 /* OpenScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenScreenViewController.h; sourceTree = "<group>"; };
 		EB86D9FE17EE07000017E2C9 /* OpenScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenScreenViewController.m; sourceTree = "<group>"; };
 		EB86DA0017EE0DF60017E2C9 /* UserSongsRequestedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSongsRequestedViewController.h; sourceTree = "<group>"; };
@@ -197,6 +200,8 @@
 		ACC718FD17EDE49100F9833E /* Requesta */ = {
 			isa = PBXGroup;
 			children = (
+				ACDD6D1117EE4B9000EEDC5C /* QuestionPanel.h */,
+				ACDD6D1217EE4B9000EEDC5C /* QuestionPanel.m */,
 				ACDD6D0A17EE27F400EEDC5C /* DeeJay.h */,
 				ACDD6D0B17EE27F400EEDC5C /* DeeJay.m */,
 				EB86DA1217EE18670017E2C9 /* DJLoginViewController.h */,
@@ -421,6 +426,7 @@
 				EB86DA1F17EE2E990017E2C9 /* DJChoiceCell.m in Sources */,
 				ACDD6D0C17EE27F400EEDC5C /* DeeJay.m in Sources */,
 				EB86DA2617EE3B950017E2C9 /* UserVoteRequestCell.m in Sources */,
+				ACDD6D1317EE4B9000EEDC5C /* QuestionPanel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
