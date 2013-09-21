@@ -23,20 +23,20 @@
 		ACDD6CC617EDE79200EEDC5C /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6CC517EDE79200EEDC5C /* libicucore.dylib */; };
 		ACDD6CC817EDE79600EEDC5C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6CC717EDE79600EEDC5C /* CFNetwork.framework */; };
 		ACDD6CCA17EDE79A00EEDC5C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6CC917EDE79A00EEDC5C /* Security.framework */; };
-		ACDD6CE217EDF0AE00EEDC5C /* UIView+JMNoise.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CCE17EDF0AE00EEDC5C /* UIView+JMNoise.m */; };
+		ACDD6CE217EDF0AE00EEDC5C /* UIView+JMNoise.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CCE17EDF0AE00EEDC5C /* UIView+JMNoise.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ACDD6CE317EDF0AE00EEDC5C /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6CD017EDF0AE00EEDC5C /* close.png */; };
 		ACDD6CE417EDF0AE00EEDC5C /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6CD117EDF0AE00EEDC5C /* close@2x.png */; };
 		ACDD6CE517EDF0AE00EEDC5C /* modalButton-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6CD217EDF0AE00EEDC5C /* modalButton-selected.png */; };
 		ACDD6CE617EDF0AE00EEDC5C /* modalButton-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6CD317EDF0AE00EEDC5C /* modalButton-selected@2x.png */; };
 		ACDD6CE717EDF0AE00EEDC5C /* modalButton.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6CD417EDF0AE00EEDC5C /* modalButton.png */; };
 		ACDD6CE817EDF0AE00EEDC5C /* modalButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6CD517EDF0AE00EEDC5C /* modalButton@2x.png */; };
-		ACDD6CE917EDF0AE00EEDC5C /* UAModalPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CD817EDF0AE00EEDC5C /* UAModalPanel.m */; };
-		ACDD6CEA17EDF0AE00EEDC5C /* UATitledModalPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CDA17EDF0AE00EEDC5C /* UATitledModalPanel.m */; };
-		ACDD6CEB17EDF0AE00EEDC5C /* UAGradientBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CDD17EDF0AE00EEDC5C /* UAGradientBackground.m */; };
-		ACDD6CEC17EDF0AE00EEDC5C /* UANoisyGradientBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CDF17EDF0AE00EEDC5C /* UANoisyGradientBackground.m */; };
-		ACDD6CED17EDF0AE00EEDC5C /* UARoundedRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CE117EDF0AE00EEDC5C /* UARoundedRectView.m */; };
+		ACDD6CE917EDF0AE00EEDC5C /* UAModalPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CD817EDF0AE00EEDC5C /* UAModalPanel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ACDD6CEA17EDF0AE00EEDC5C /* UATitledModalPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CDA17EDF0AE00EEDC5C /* UATitledModalPanel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ACDD6CEB17EDF0AE00EEDC5C /* UAGradientBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CDD17EDF0AE00EEDC5C /* UAGradientBackground.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ACDD6CEC17EDF0AE00EEDC5C /* UANoisyGradientBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CDF17EDF0AE00EEDC5C /* UANoisyGradientBackground.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ACDD6CED17EDF0AE00EEDC5C /* UARoundedRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CE117EDF0AE00EEDC5C /* UARoundedRectView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ACDD6CEF17EDF0BA00EEDC5C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6CEE17EDF0BA00EEDC5C /* QuartzCore.framework */; };
-		ACDD6CF217EDF0E400EEDC5C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CF117EDF0E400EEDC5C /* MBProgressHUD.m */; };
+		ACDD6CF217EDF0E400EEDC5C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6CF117EDF0E400EEDC5C /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */

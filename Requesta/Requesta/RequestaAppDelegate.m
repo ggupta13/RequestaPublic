@@ -14,10 +14,40 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    //This is my method now -Jon
+    [self addDJProfileWithNickname:@"GaganG" realName:@"Gaaaaa" location:@"MI"];
+    
+    /*Firebase *f = [[Firebase alloc]initWithUrl:@"https://requesta.firebaseio.com/DJProfiles"];
+    // Read data and react to changes
+    [f observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        NSLog(@"%@ -> %@", snapshot.name, snapshot.value);
+    }];*/
+    
     return YES;
 }
-							
+
+-(void)addDJProfileWithNickname:(NSString *)nickname realName:(NSString *)realName location:(NSString *)location
+{
+    Firebase *f = [[Firebase alloc]initWithUrl:@"https://requesta.firebaseio.com/DJProfiles"];
+    
+    __block BOOL alreadyAdded=NO;
+    [f observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot)
+    {
+        if(!alreadyAdded)
+        {
+            [f updateChildValues:@{[NSString stringWithFormat:@"%i",snapshot.childrenCount]:@{
+             @"location":location,
+             @"nickname":nickname,
+             @"realName":realName
+             }}];
+            
+            alreadyAdded = YES;
+        }
+        
+    }];
+    
+    
+}
+					
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
