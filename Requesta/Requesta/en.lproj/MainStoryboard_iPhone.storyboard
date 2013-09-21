@@ -40,10 +40,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="h2s-EZ-e6A" firstAttribute="top" secondItem="kmZ-jC-yvU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5oJ-GS-DlX"/>
-                            <constraint firstItem="h2s-EZ-e6A" firstAttribute="centerX" secondItem="kmZ-jC-yvU" secondAttribute="centerX" type="default" id="6kk-XA-jZ8"/>
-                            <constraint firstAttribute="trailing" secondItem="kmZ-jC-yvU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="MnO-aL-93s"/>
+                            <constraint firstItem="kmZ-jC-yvU" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="E0V-JX-CuO"/>
+                            <constraint firstItem="kmZ-jC-yvU" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="LuB-Gd-fDr"/>
+                            <constraint firstItem="kmZ-jC-yvU" firstAttribute="centerX" secondItem="h2s-EZ-e6A" secondAttribute="centerX" type="default" id="MCW-0u-ZSA"/>
                             <constraint firstItem="kmZ-jC-yvU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ZVL-go-23p"/>
-                            <constraint firstItem="kmZ-jC-yvU" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dSu-WD-egH"/>
                             <constraint firstAttribute="bottom" secondItem="h2s-EZ-e6A" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="qwU-U5-rXm"/>
                         </constraints>
                     </view>
