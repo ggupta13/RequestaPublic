@@ -45,6 +45,11 @@
 		ACDD6D0717EE031C00EEDC5C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6D0617EE031C00EEDC5C /* Accounts.framework */; };
 		ACDD6D0917EE032000EEDC5C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDD6D0817EE032000EEDC5C /* Social.framework */; };
 		EB86D9FF17EE07000017E2C9 /* OpenScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86D9FE17EE07000017E2C9 /* OpenScreenViewController.m */; };
+		EB86DA0217EE0DF60017E2C9 /* UserSongsRequestedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0117EE0DF60017E2C9 /* UserSongsRequestedViewController.m */; };
+		EB86DA0517EE0ED30017E2C9 /* UserNewSongRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0417EE0ED30017E2C9 /* UserNewSongRequestViewController.m */; };
+		EB86DA0817EE106A0017E2C9 /* DJSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0717EE106A0017E2C9 /* DJSignInViewController.m */; };
+		EB86DA0B17EE11390017E2C9 /* DJSongRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0A17EE11390017E2C9 /* DJSongRequestViewController.m */; };
+		EB86DA0E17EE12650017E2C9 /* DJSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0D17EE12640017E2C9 /* DJSignUpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +107,16 @@
 		ACDD6D0817EE032000EEDC5C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		EB86D9FD17EE07000017E2C9 /* OpenScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenScreenViewController.h; sourceTree = "<group>"; };
 		EB86D9FE17EE07000017E2C9 /* OpenScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenScreenViewController.m; sourceTree = "<group>"; };
+		EB86DA0017EE0DF60017E2C9 /* UserSongsRequestedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSongsRequestedViewController.h; sourceTree = "<group>"; };
+		EB86DA0117EE0DF60017E2C9 /* UserSongsRequestedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSongsRequestedViewController.m; sourceTree = "<group>"; };
+		EB86DA0317EE0ED30017E2C9 /* UserNewSongRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserNewSongRequestViewController.h; sourceTree = "<group>"; };
+		EB86DA0417EE0ED30017E2C9 /* UserNewSongRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserNewSongRequestViewController.m; sourceTree = "<group>"; };
+		EB86DA0617EE106A0017E2C9 /* DJSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSignInViewController.h; sourceTree = "<group>"; };
+		EB86DA0717EE106A0017E2C9 /* DJSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJSignInViewController.m; sourceTree = "<group>"; };
+		EB86DA0917EE11390017E2C9 /* DJSongRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSongRequestViewController.h; sourceTree = "<group>"; };
+		EB86DA0A17EE11390017E2C9 /* DJSongRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJSongRequestViewController.m; sourceTree = "<group>"; };
+		EB86DA0C17EE12640017E2C9 /* DJSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSignUpViewController.h; sourceTree = "<group>"; };
+		EB86DA0D17EE12640017E2C9 /* DJSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJSignUpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +186,16 @@
 				ACC7190617EDE49100F9833E /* RequestaAppDelegate.h */,
 				ACC7190717EDE49100F9833E /* RequestaAppDelegate.m */,
 				ACC7190F17EDE49100F9833E /* MainStoryboard_iPhone.storyboard */,
+				EB86DA0C17EE12640017E2C9 /* DJSignUpViewController.h */,
+				EB86DA0D17EE12640017E2C9 /* DJSignUpViewController.m */,
+				EB86DA0917EE11390017E2C9 /* DJSongRequestViewController.h */,
+				EB86DA0A17EE11390017E2C9 /* DJSongRequestViewController.m */,
+				EB86DA0617EE106A0017E2C9 /* DJSignInViewController.h */,
+				EB86DA0717EE106A0017E2C9 /* DJSignInViewController.m */,
+				EB86DA0317EE0ED30017E2C9 /* UserNewSongRequestViewController.h */,
+				EB86DA0417EE0ED30017E2C9 /* UserNewSongRequestViewController.m */,
+				EB86DA0017EE0DF60017E2C9 /* UserSongsRequestedViewController.h */,
+				EB86DA0117EE0DF60017E2C9 /* UserSongsRequestedViewController.m */,
 				EB86D9FD17EE07000017E2C9 /* OpenScreenViewController.h */,
 				EB86D9FE17EE07000017E2C9 /* OpenScreenViewController.m */,
 				ACC7191217EDE49100F9833E /* MainStoryboard_iPad.storyboard */,
@@ -355,6 +380,11 @@
 				ACDD6D0017EDF7D600EEDC5C /* Singleton.m in Sources */,
 				ACDD6D0317EDF82A00EEDC5C /* Song.m in Sources */,
 				EB86D9FF17EE07000017E2C9 /* OpenScreenViewController.m in Sources */,
+				EB86DA0217EE0DF60017E2C9 /* UserSongsRequestedViewController.m in Sources */,
+				EB86DA0517EE0ED30017E2C9 /* UserNewSongRequestViewController.m in Sources */,
+				EB86DA0817EE106A0017E2C9 /* DJSignInViewController.m in Sources */,
+				EB86DA0B17EE11390017E2C9 /* DJSongRequestViewController.m in Sources */,
+				EB86DA0E17EE12650017E2C9 /* DJSignUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
