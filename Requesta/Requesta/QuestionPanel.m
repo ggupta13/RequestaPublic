@@ -15,18 +15,18 @@
     self = [super initWithFrame:frame];
     if (self)
     {
-        self.songTitle = [[UITextView alloc] initWithFrame:CGRectMake(40, 35, 240, 50)];
+        self.songTitle = [[UITextView alloc] initWithFrame:CGRectMake(0, 35,320, 50)];
         [self addSubview:self.songTitle];
         [self.songTitle setBackgroundColor:[UIColor clearColor]];
         self.songTitle.textAlignment = NSTextAlignmentCenter;
-        [self.songTitle setFont:[UIFont fontWithName:@"Eurostile" size:18.0f]];
+        [self.songTitle setFont:[UIFont fontWithName:@"Eurostile" size:27.0f]];
         [self.songTitle setTextColor:[UIColor whiteColor]];
         
-        self.songArtist = [[UITextView alloc] initWithFrame:CGRectMake(40, 75, 240, 110)];
+        self.songArtist = [[UITextView alloc] initWithFrame:CGRectMake(40, 65, 240, 110)];
         [self addSubview:self.songArtist];
         [self.songArtist setBackgroundColor:[UIColor clearColor]];
         self.songArtist.textAlignment = NSTextAlignmentCenter;
-        [self.songArtist setFont:[UIFont fontWithName:@"Eurostile" size:18.0f]];
+        [self.songArtist setFont:[UIFont fontWithName:@"Eurostile" size:22.0f]];
         [self.songArtist setTextColor:[UIColor whiteColor]];
         
         self.requestButton = [UIButton buttonWithType:UIButtonTypeCustom];

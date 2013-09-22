@@ -88,6 +88,14 @@
              }
              if([self.chosenDJ.nickname isEqualToString:d.nickname] && [self.chosenDJ.realName isEqualToString:d.realName])
              {
+                 NSSortDescriptor *sortDescriptor;
+                 sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"votes"
+                                                              ascending:NO];
+                 NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+                 NSArray *sortedArray;
+                 sortedArray = [d.requestedSongs sortedArrayUsingDescriptors:sortDescriptors];
+                 d.requestedSongs = [[NSMutableArray alloc]initWithArray:sortedArray];
+                 
                  self.chosenDJ.requestedSongs = [[NSMutableArray alloc]initWithArray:d.requestedSongs];
                  [self.SongRequestTableOutlet reloadData];
              }
@@ -119,18 +127,18 @@
     //THERE IS YOUR SONG, LOOK AT SONG.H FOR ALL THE DATA
     
     
-    CGRect frame = CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.bounds.size.width, self.view.bounds.size.height * (7/8.));
+    CGRect frame = CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.bounds.size.width, self.view.bounds.size.height * (5.3/8.));
     DJRequestSongInfoPanel *qPanel = [[DJRequestSongInfoPanel alloc] initWithFrame:frame];
     qPanel.delegate2 = self;
     qPanel.djRealName = [Singleton sharedInstance].currentDeejay.realName;
     qPanel.djNickname = [Singleton sharedInstance].currentDeejay.nickname;
     qPanel.songTitle.text = s.songName;
     qPanel.songArtist.text = s.artist;
-   
+    qPanel.tempo = [NSString stringWithFormat:@"%i",(int)s.tempo];
+    qPanel.votes = [NSString stringWithFormat:@"%i",s.votes];
+    [qPanel.requestButton removeFromSuperview];
     [qPanel showFromPoint:self.view.center];
-    
-    
-    
+    [self.view addSubview:qPanel];
     
     
     

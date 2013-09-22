@@ -85,6 +85,14 @@
             }
             if([self.chosenDJ.nickname isEqualToString:d.nickname] && [self.chosenDJ.realName isEqualToString:d.realName])
             {
+                NSSortDescriptor *sortDescriptor;
+                sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"votes"
+                                                             ascending:NO];
+                NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+                NSArray *sortedArray;
+                sortedArray = [d.requestedSongs sortedArrayUsingDescriptors:sortDescriptors];
+                d.requestedSongs = [[NSMutableArray alloc]initWithArray:sortedArray];
+                
                 self.chosenDJ.requestedSongs = [[NSMutableArray alloc]initWithArray:d.requestedSongs];
                 [Singleton sharedInstance].currRequestedSongs = d.requestedSongs;
                 [self.UserSongRequestedTableOutlet reloadData];

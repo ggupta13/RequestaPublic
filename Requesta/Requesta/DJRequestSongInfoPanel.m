@@ -13,8 +13,64 @@
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self) {
+    if (self)
+    {
+        self.votes = [[UITextView alloc] initWithFrame:CGRectMake(30, 110, 250, 70)];
+        [self addSubview:self.votes];
+        [self.votes setBackgroundColor:[UIColor clearColor]];
+        self.votes.textAlignment = NSTextAlignmentLeft;
+        [self.votes setFont:[UIFont fontWithName:@"Eurostile" size:18.0f]];
+        [self.votes setTextColor:[UIColor whiteColor]];
+        self.votes.text=@"Votes: 34";
         
+        self.tempo = [[UITextView alloc] initWithFrame:CGRectMake(30, 140, 250, 70)];
+        [self addSubview:self.tempo];
+        [self.tempo setBackgroundColor:[UIColor clearColor]];
+        self.tempo.textAlignment = NSTextAlignmentLeft;
+        [self.tempo setFont:[UIFont fontWithName:@"Eurostile" size:18.0f]];
+        [self.tempo setTextColor:[UIColor whiteColor]];
+        self.tempo.text=@"BPM: 1234";
+        
+        self.danceability = [[UITextView alloc] initWithFrame:CGRectMake(30, 170, 250, 70)];
+        [self addSubview:self.danceability];
+        [self.danceability setBackgroundColor:[UIColor clearColor]];
+        self.danceability.textAlignment = NSTextAlignmentLeft;
+        [self.danceability setFont:[UIFont fontWithName:@"Eurostile" size:18.0f]];
+        [self.danceability setTextColor:[UIColor whiteColor]];
+        self.danceability.text=@"Danceability: 1234";
+        
+        self.danceability = [[UITextView alloc] initWithFrame:CGRectMake(30, 170, 250, 70)];
+        [self addSubview:self.danceability];
+        [self.danceability setBackgroundColor:[UIColor clearColor]];
+        self.danceability.textAlignment = NSTextAlignmentLeft;
+        [self.danceability setFont:[UIFont fontWithName:@"Eurostile" size:18.0f]];
+        [self.danceability setTextColor:[UIColor whiteColor]];
+        self.danceability.text=@"Danceability: 1234";
+        
+        self.energy = [[UITextView alloc] initWithFrame:CGRectMake(30, 200, 250, 70)];
+        [self addSubview:self.energy];
+        [self.energy setBackgroundColor:[UIColor clearColor]];
+        self.energy.textAlignment = NSTextAlignmentLeft;
+        [self.energy setFont:[UIFont fontWithName:@"Eurostile" size:18.0f]];
+        [self.energy setTextColor:[UIColor whiteColor]];
+        self.energy.text=@"Energy: 1234";
+        
+        self.loudness = [[UITextView alloc] initWithFrame:CGRectMake(30, 230, 250, 70)];
+        [self addSubview:self.loudness];
+        [self.loudness setBackgroundColor:[UIColor clearColor]];
+        self.loudness.textAlignment = NSTextAlignmentLeft;
+        [self.loudness setFont:[UIFont fontWithName:@"Eurostile" size:18.0f]];
+        [self.loudness setTextColor:[UIColor whiteColor]];
+        self.loudness.text=@"Loudness: 1234";
+        
+        self.duration = [[UITextView alloc] initWithFrame:CGRectMake(30, 260, 250, 70)];
+        [self addSubview:self.duration];
+        [self.duration setBackgroundColor:[UIColor clearColor]];
+        self.duration.textAlignment = NSTextAlignmentLeft;
+        [self.duration setFont:[UIFont fontWithName:@"Eurostile" size:18.0f]];
+        [self.duration setTextColor:[UIColor whiteColor]];
+        self.duration.text=@"Duration: 1234";
+
     }
     
     

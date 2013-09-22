@@ -186,14 +186,15 @@
     [attributes setValue:[UIFont fontWithName:@"Eurostile" size:14.0f] forKey:UITextAttributeFont];
     [[UIBarButtonItem appearance] setTitleTextAttributes:attributes forState:UIControlStateNormal];
     
-    //[self.navigationItem setBackBarButtonItem:<#(UIBarButtonItem *)#>];
-    
     UIImage *backgroundImage = [self drawImageWithColor:blue];
     [self.navigationController.navigationBar setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsDefault];
     
-    
-        
     //44,172,205
+}
+
+-(void)back {
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(UIImage*)drawImageWithColor:(UIColor*)color{
