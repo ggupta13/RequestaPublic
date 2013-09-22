@@ -55,6 +55,7 @@
 		ACDD6D1F17EE896B00EEDC5C /* litttleBlackBackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6D1E17EE896B00EEDC5C /* litttleBlackBackButton.png */; };
 		ACDD6D2217EE928B00EEDC5C /* RequestaLogo57by57.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6D2017EE928B00EEDC5C /* RequestaLogo57by57.png */; };
 		ACDD6D2317EE928B00EEDC5C /* RequestaLogo114by114.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6D2117EE928B00EEDC5C /* RequestaLogo114by114.png */; };
+		ACDD6D2517EE97BB00EEDC5C /* fixedBlueButton.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6D2417EE97BB00EEDC5C /* fixedBlueButton.png */; };
 		EB479FEC17EE91A4002CF272 /* RequestaLogo114by114.png in Resources */ = {isa = PBXBuildFile; fileRef = EB479FEB17EE91A4002CF272 /* RequestaLogo114by114.png */; };
 		EB86D9FF17EE07000017E2C9 /* OpenScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86D9FE17EE07000017E2C9 /* OpenScreenViewController.m */; };
 		EB86DA0217EE0DF60017E2C9 /* UserSongsRequestedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0117EE0DF60017E2C9 /* UserSongsRequestedViewController.m */; };
@@ -73,7 +74,6 @@
 		EB86DA3617EE69230017E2C9 /* DJRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA3517EE69230017E2C9 /* DJRequestCell.xib */; };
 		EB86DA3D17EE7B7A0017E2C9 /* DJRequestSongInfoPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA3C17EE7B7A0017E2C9 /* DJRequestSongInfoPanel.m */; };
 		EB86DA4517EE91070017E2C9 /* RequestaLogo57by57.png in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA4417EE91070017E2C9 /* RequestaLogo57by57.png */; };
-		EBA8F99017EE950000FA3C31 /* fixedBlueButton.png in Resources */ = {isa = PBXBuildFile; fileRef = EBA8F98F17EE950000FA3C31 /* fixedBlueButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +142,7 @@
 		ACDD6D1E17EE896B00EEDC5C /* litttleBlackBackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = litttleBlackBackButton.png; sourceTree = "<group>"; };
 		ACDD6D2017EE928B00EEDC5C /* RequestaLogo57by57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RequestaLogo57by57.png; sourceTree = "<group>"; };
 		ACDD6D2117EE928B00EEDC5C /* RequestaLogo114by114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RequestaLogo114by114.png; sourceTree = "<group>"; };
+		ACDD6D2417EE97BB00EEDC5C /* fixedBlueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fixedBlueButton.png; sourceTree = "<group>"; };
 		EB479FEB17EE91A4002CF272 /* RequestaLogo114by114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RequestaLogo114by114.png; sourceTree = "<group>"; };
 		EB86D9FD17EE07000017E2C9 /* OpenScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenScreenViewController.h; sourceTree = "<group>"; };
 		EB86D9FE17EE07000017E2C9 /* OpenScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenScreenViewController.m; sourceTree = "<group>"; };
@@ -289,6 +290,7 @@
 		ACC718FE17EDE49100F9833E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ACDD6D2417EE97BB00EEDC5C /* fixedBlueButton.png */,
 				EBA8F98F17EE950000FA3C31 /* fixedBlueButton.png */,
 				ACDD6D2017EE928B00EEDC5C /* RequestaLogo57by57.png */,
 				ACDD6D2117EE928B00EEDC5C /* RequestaLogo114by114.png */,
@@ -468,7 +470,7 @@
 				EB479FEC17EE91A4002CF272 /* RequestaLogo114by114.png in Resources */,
 				ACDD6D2217EE928B00EEDC5C /* RequestaLogo57by57.png in Resources */,
 				ACDD6D2317EE928B00EEDC5C /* RequestaLogo114by114.png in Resources */,
-				EBA8F99017EE950000FA3C31 /* fixedBlueButton.png in Resources */,
+				ACDD6D2517EE97BB00EEDC5C /* fixedBlueButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
