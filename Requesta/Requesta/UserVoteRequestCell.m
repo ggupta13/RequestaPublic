@@ -85,11 +85,11 @@
                                   {
                                       if(count2==0)
                                           songArtist = [childd2.value description];
-                                      else if(count2==1)
+                                      else if(count2==5)
                                           songName = [childd2.value description];
-                                      else if(count2==2)
+                                      else if(count2==6)
                                           song_id = [childd2.value description];
-                                      else if(count2==3)
+                                      else if(count2==8)
                                           currVotes = [childd2.value integerValue];
                                       
                                       count2++;
@@ -100,8 +100,9 @@
                                   if([song.artist isEqualToString:songArtist] &&
                                      [song.songName isEqualToString:songName])
                                   {
-                                      NSLog(@"found the song!");
+                                      
                                       NSString *path = [NSString stringWithFormat:@"https://requesta.firebaseio.com/DJProfiles/%@/requestedSongs/%@",currName,currSong];
+                                      NSLog(@"found the song at path: %@",path);
                                       Firebase *f3 = [[Firebase alloc]initWithUrl:path];
                                       
                                       __block BOOL already2 = NO;
@@ -112,9 +113,14 @@
                                            {
                                                [f3 updateChildValues:@{
                                                 @"artist":song.artist,
+                                                @"danceability":[NSNumber numberWithDouble:song.danceability],
+                                                @"duration":[NSNumber numberWithDouble:song.duration],
+                                                @"energy":[NSNumber numberWithDouble:song.energy],
+                                                @"loudness":[NSNumber numberWithDouble:song.loudness],
                                                 @"songName":song.songName,
                                                 @"song_id":song.song_id,
-                                                @"votes":[NSNumber numberWithInt:(currVotes +1)]
+                                                @"tempo":[NSNumber numberWithDouble:song.tempo],
+                                                @"votes":[NSNumber numberWithInt: song.votes+1]
                                                 }];
                                                
                                                already2=YES;

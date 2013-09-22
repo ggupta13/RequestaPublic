@@ -10,6 +10,7 @@
 #import "Song.h"
 #import <Firebase/Firebase.h>
 #import "UserVoteRequestCell.h"
+#import "Singleton.h"
 
 @interface UserSongsRequestedViewController ()
 
@@ -55,14 +56,24 @@
                         int count2=0;
                         for(FDataSnapshot *child3 in c.children)
                         {
-                            //artist,md5,songname,songid,votes
+                            //artist,dance,duration
                             if(count2==0)
                                 s.artist = [child3.value description];
                             else if(count2==1)
-                                s.songName  = [child3.value description];
+                                s.danceability = [child3.value doubleValue];
                             else if(count2==2)
-                                s.song_id  = [child3.value description];
+                                s.duration = [child3.value doubleValue];
                             else if(count2==3)
+                                s.energy = [child3.value doubleValue];
+                            else if(count2==4)
+                                s.loudness = [child3.value doubleValue];
+                            else if(count2==5)
+                                s.songName  = [child3.value description];
+                            else if(count2==6)
+                                s.song_id  = [child3.value description];
+                            else if(count2==7)
+                                s.tempo = [child3.value doubleValue];
+                            else if(count2==8)
                                 s.votes = [child3.value integerValue];
                             
                             count2++;
@@ -75,6 +86,7 @@
             if([self.chosenDJ.nickname isEqualToString:d.nickname] && [self.chosenDJ.realName isEqualToString:d.realName])
             {
                 self.chosenDJ.requestedSongs = [[NSMutableArray alloc]initWithArray:d.requestedSongs];
+                [Singleton sharedInstance].currRequestedSongs = d.requestedSongs;
                 [self.UserSongRequestedTableOutlet reloadData];
             }
         }

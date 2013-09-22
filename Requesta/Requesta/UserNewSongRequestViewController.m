@@ -101,7 +101,12 @@
                                @"artist":song.artist,
                                @"songName":song.songName,
                                @"song_id":song.song_id,
-                               @"votes":[NSNumber numberWithInt: song.votes]
+                               @"votes":[NSNumber numberWithInt: song.votes],
+                               @"danceability":[NSNumber numberWithDouble:song.danceability],
+                               @"energy":[NSNumber numberWithDouble:song.energy],
+                               @"duration":[NSNumber numberWithDouble:song.duration],
+                               @"loudness":[NSNumber numberWithDouble:song.loudness],
+                               @"tempo":[NSNumber numberWithDouble:song.tempo]
                                }}];
                               
                               already=YES;
@@ -188,12 +193,37 @@
                  
                  [self.searchResults addObject:s];
              }
+             [self cleanSearchResults];
              [self.hud hide:YES];
              [self.SearchResultTableOutlet reloadData];
          }
      }];
     
 
+}
+
+-(void)cleanSearchResults
+{
+    NSMutableArray *copy = [NSMutableArray new];
+    
+    for(int i=0;i<self.searchResults.count;i++)
+    {
+        BOOL already=NO;
+        Song *p = [self.searchResults objectAtIndex:i];
+        for(int j=0;j<copy.count;j++)
+        {
+            Song *s = [copy objectAtIndex:j];
+            if([p.songName isEqualToString:s.songName] && [p.artist isEqualToString:s.artist])
+            {
+                already=YES;
+                break;
+            }
+        }
+        if(!already)
+           [copy addObject:p];
+    }
+    
+    self.searchResults = [[NSMutableArray alloc]initWithArray:copy];
 }
 
 - (IBAction)cancelPressed:(id)sender
