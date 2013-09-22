@@ -45,6 +45,10 @@
     [self.view addGestureRecognizer:tapGesture];
     [tapGesture setCancelsTouchesInView:NO];
     
+    self.searchButton.titleLabel.font = [UIFont fontWithName:@"Eurostile" size:18.0f];
+    self.cancelButton.titleLabel.font = [UIFont fontWithName:@"Eurostile" size:14.0f];
+    self.MusicSearchTextFieldOutlet.font = [UIFont fontWithName:@"Eurostile" size:14.0f];
+    
     Song *s = [[Song alloc]init];
     s.songName = @"Beauty2222";
     s.song_id = @"willbechanged";

@@ -101,6 +101,8 @@
     
     self.navigationItem.title = self.chosenDJ.nickname;
     [self addCallbackOnSongs];
+    
+    self.requestButton.titleLabel.font = [UIFont fontWithName:@"Eurostile" size:18.0f];
 }
 
 - (void)didReceiveMemoryWarning

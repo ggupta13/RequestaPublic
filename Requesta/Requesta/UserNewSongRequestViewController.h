@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *SearchResultTableOutlet;
 - (IBAction)SearchButtonPressed:(id)sender;
 - (IBAction)cancelPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
 
 @property NSMutableArray *searchResults;
 

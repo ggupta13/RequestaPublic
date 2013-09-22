@@ -43,11 +43,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.3410993303571429" green="0.3319745173212949" blue="0.33664877696872203" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="h2s-EZ-e6A" firstAttribute="top" secondItem="kmZ-jC-yvU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5oJ-GS-DlX"/>
+                            <constraint firstItem="kmZ-jC-yvU" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="08p-Ls-g2O"/>
+                            <constraint firstAttribute="bottom" secondItem="h2s-EZ-e6A" secondAttribute="bottom" constant="24" id="Dok-Vr-Adv"/>
                             <constraint firstItem="kmZ-jC-yvU" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="E0V-JX-CuO"/>
                             <constraint firstItem="kmZ-jC-yvU" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="LuB-Gd-fDr"/>
                             <constraint firstItem="kmZ-jC-yvU" firstAttribute="centerX" secondItem="h2s-EZ-e6A" secondAttribute="centerX" type="default" id="MCW-0u-ZSA"/>
-                            <constraint firstItem="kmZ-jC-yvU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ZVL-go-23p"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Select a DJ" id="9H8-qh-u4L"/>
@@ -70,19 +70,23 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9ha-VX-k0r">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="413" id="74H-yJ-jaD"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="p5s-u5-4jI" id="B4O-Nt-28V"/>
                                     <outlet property="delegate" destination="p5s-u5-4jI" id="dwR-48-QPk"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1S-Jf-rVf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1S-Jf-rVf">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="7EB-3Y-Uzo"/>
+                                    <constraint firstAttribute="height" constant="44" id="WzQ-G0-jg6"/>
+                                    <constraint firstAttribute="width" constant="226" id="bSg-A2-jRV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="REQUEST NEW SONG">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Request New Song" backgroundImage="BlueButtonBackGround.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -94,25 +98,24 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9ha-VX-k0r" firstAttribute="trailing" secondItem="Zth-od-Ebp" secondAttribute="trailing" type="default" id="Mx6-ZZ-7NW"/>
-                            <constraint firstItem="s1S-Jf-rVf" firstAttribute="top" secondItem="9ha-VX-k0r" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ey5-ei-zZB"/>
+                            <constraint firstItem="9ha-VX-k0r" firstAttribute="top" secondItem="Zth-od-Ebp" secondAttribute="top" type="default" id="Ozk-ds-wzi"/>
                             <constraint firstItem="9ha-VX-k0r" firstAttribute="leading" secondItem="Zth-od-Ebp" secondAttribute="leading" type="default" id="h8E-Wz-KU8"/>
-                            <constraint firstAttribute="bottom" secondItem="s1S-Jf-rVf" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="jcy-3e-tOS"/>
-                            <constraint firstItem="s1S-Jf-rVf" firstAttribute="leading" secondItem="Zth-od-Ebp" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="l1Q-IE-FIg"/>
-                            <constraint firstAttribute="trailing" secondItem="s1S-Jf-rVf" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qhc-v3-qDf"/>
-                            <constraint firstItem="9ha-VX-k0r" firstAttribute="top" secondItem="Zth-od-Ebp" secondAttribute="top" constant="20" symbolic="YES" type="default" id="zc9-ku-ybG"/>
+                            <constraint firstItem="s1S-Jf-rVf" firstAttribute="centerX" secondItem="9ha-VX-k0r" secondAttribute="centerX" type="default" id="ppW-hT-Vcm"/>
+                            <constraint firstItem="s1S-Jf-rVf" firstAttribute="top" secondItem="Zth-od-Ebp" secondAttribute="top" constant="436" id="zhd-6q-yJz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Requested Songs" id="Bd6-Kz-dSc"/>
                     <connections>
                         <outlet property="UserSongRequestedTableOutlet" destination="9ha-VX-k0r" id="iLx-sJ-ADL"/>
+                        <outlet property="requestButton" destination="s1S-Jf-rVf" id="27a-u5-LQr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OBp-Mb-Xrf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="795" y="-11"/>
+            <point key="canvasLocation" x="795" y="-5"/>
         </scene>
         <!--User New Song Request View Controller - Request Song-->
         <scene sceneID="U4N-YA-paP">
@@ -122,7 +125,10 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Song or Artist" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bey-kW-aia">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter Song or Artist" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bey-kW-aia">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="siB-YO-ZxL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -136,13 +142,14 @@
                                     <outlet property="delegate" destination="OKH-TT-ZDr" id="ffk-po-Xns"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jK-aQ-lfZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jK-aQ-lfZ">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="172" id="AxQ-vM-Wxm"/>
+                                    <constraint firstAttribute="height" constant="44" id="Hp2-FD-B69"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                <state key="normal" title="Search">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Search" backgroundImage="BlueButtonBackGround.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -152,14 +159,14 @@
                                     <action selector="SearchButtonPressed:" destination="OKH-TT-ZDr" eventType="touchUpInside" id="Vmr-iu-4ep"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAo-hq-fE0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAo-hq-fE0">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="9J1-jv-gKW"/>
                                     <constraint firstAttribute="width" constant="54" id="DKA-Hs-9VM"/>
+                                    <constraint firstAttribute="height" constant="29" id="o5N-s9-FcQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Cancel" backgroundImage="BlueButtonBackGround.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -172,14 +179,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="23F-O5-ynw" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="1Bx-aJ-DKq"/>
                             <constraint firstItem="bey-kW-aia" firstAttribute="leading" secondItem="jXe-xp-kEw" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5Ed-eT-iO2"/>
-                            <constraint firstItem="RAo-hq-fE0" firstAttribute="leading" secondItem="jXe-xp-kEw" secondAttribute="leading" constant="21" id="5c2-qd-fyw"/>
                             <constraint firstItem="2jK-aQ-lfZ" firstAttribute="centerX" secondItem="bey-kW-aia" secondAttribute="centerX" type="default" id="5hV-qt-OWQ"/>
-                            <constraint firstItem="RAo-hq-fE0" firstAttribute="top" secondItem="jXe-xp-kEw" secondAttribute="top" constant="4" id="BoZ-nY-xmc"/>
-                            <constraint firstItem="2jK-aQ-lfZ" firstAttribute="top" secondItem="jXe-xp-kEw" secondAttribute="top" constant="82" id="dUg-WC-U2n"/>
+                            <constraint firstItem="23F-O5-ynw" firstAttribute="bottom" secondItem="jXe-xp-kEw" secondAttribute="bottom" type="default" id="buD-ZG-pSq"/>
                             <constraint firstAttribute="trailing" secondItem="bey-kW-aia" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ipo-MQ-3qq"/>
-                            <constraint firstItem="bey-kW-aia" firstAttribute="top" secondItem="jXe-xp-kEw" secondAttribute="top" constant="41" id="kTt-pL-iE5"/>
+                            <constraint firstItem="RAo-hq-fE0" firstAttribute="leading" secondItem="jXe-xp-kEw" secondAttribute="leading" constant="15" id="kj9-mO-FCI"/>
+                            <constraint firstItem="2jK-aQ-lfZ" firstAttribute="top" secondItem="jXe-xp-kEw" secondAttribute="top" constant="98" id="lhW-0N-g2S"/>
+                            <constraint firstItem="RAo-hq-fE0" firstAttribute="top" secondItem="jXe-xp-kEw" secondAttribute="top" constant="10" id="pNo-Ne-B0N"/>
+                            <constraint firstItem="bey-kW-aia" firstAttribute="top" secondItem="jXe-xp-kEw" secondAttribute="top" constant="52" id="qte-z2-YVz"/>
                             <constraint firstItem="23F-O5-ynw" firstAttribute="leading" secondItem="jXe-xp-kEw" secondAttribute="leading" type="default" id="vIt-2j-fxI"/>
                             <constraint firstItem="23F-O5-ynw" firstAttribute="trailing" secondItem="jXe-xp-kEw" secondAttribute="trailing" type="default" id="w9X-Dm-h49"/>
                         </constraints>
@@ -188,6 +195,8 @@
                     <connections>
                         <outlet property="MusicSearchTextFieldOutlet" destination="bey-kW-aia" id="H1B-il-UJi"/>
                         <outlet property="SearchResultTableOutlet" destination="23F-O5-ynw" id="Iyw-iQ-Knh"/>
+                        <outlet property="cancelButton" destination="RAo-hq-fE0" id="0Cm-Ze-P0X"/>
+                        <outlet property="searchButton" destination="2jK-aQ-lfZ" id="BqU-KR-hEb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HfA-EB-Gyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -312,6 +321,9 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="sBH-Jm-9pU">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="464" id="LY9-AH-fNU"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="YJc-Ll-Jmw" id="WVc-tx-vw0"/>
                                     <outlet property="delegate" destination="YJc-Ll-Jmw" id="acT-Ys-3bh"/>
@@ -320,10 +332,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="sBH-Jm-9pU" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="AZi-kV-2FR"/>
                             <constraint firstItem="sBH-Jm-9pU" firstAttribute="trailing" secondItem="5P2-lL-dvl" secondAttribute="trailing" type="default" id="EH3-g7-w81"/>
                             <constraint firstItem="sBH-Jm-9pU" firstAttribute="leading" secondItem="5P2-lL-dvl" secondAttribute="leading" type="default" id="Iwb-dv-Dha"/>
-                            <constraint firstItem="sBH-Jm-9pU" firstAttribute="top" secondItem="5P2-lL-dvl" secondAttribute="top" constant="20" symbolic="YES" type="default" id="keT-pT-Nfh"/>
+                            <constraint firstItem="sBH-Jm-9pU" firstAttribute="top" secondItem="5P2-lL-dvl" secondAttribute="top" type="default" id="WYn-M8-23A"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Requested Songs" id="BeN-1J-JRz"/>
@@ -509,6 +520,8 @@
                 <relationship kind="action" name="cancelPressed:"/>
                 <relationship kind="outlet" name="MusicSearchTextFieldOutlet" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="SearchResultTableOutlet" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="cancelButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="searchButton" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="UserSongsRequestedViewController" superclassName="UIViewController">
@@ -516,6 +529,7 @@
             <relationships>
                 <relationship kind="action" name="RequestNewSongButtonPressed:"/>
                 <relationship kind="outlet" name="UserSongRequestedTableOutlet" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="requestButton" candidateClass="UIButton"/>
             </relationships>
         </class>
     </classes>

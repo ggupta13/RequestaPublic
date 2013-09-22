@@ -12,6 +12,7 @@
 @interface UserSongsRequestedViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *UserSongRequestedTableOutlet;
 - (IBAction)RequestNewSongButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *requestButton;
 
 @property DeeJay *chosenDJ;
 
