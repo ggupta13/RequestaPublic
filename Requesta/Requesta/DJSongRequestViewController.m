@@ -11,6 +11,8 @@
 #import <Firebase/Firebase.h>
 #import "DeeJay.h"
 #import "Song.h"
+#import "Singleton.h"
+#import "QuestionPanel.h"
 
 @interface DJSongRequestViewController ()
 
@@ -59,12 +61,23 @@
                              //artist,dance,duration
                              if(count2==0)
                                  s.artist = [child3.value description];
+                             else if(count2==1)
+                                 s.danceability = [child3.value doubleValue];
+                             else if(count2==2)
+                                 s.duration = [child3.value doubleValue];
+                             else if(count2==3)
+                                 s.energy = [child3.value doubleValue];
+                             else if(count2==4)
+                                 s.loudness = [child3.value doubleValue];
                              else if(count2==5)
                                  s.songName  = [child3.value description];
                              else if(count2==6)
                                  s.song_id  = [child3.value description];
+                             else if(count2==7)
+                                 s.tempo = [child3.value doubleValue];
                              else if(count2==8)
                                  s.votes = [child3.value integerValue];
+
                              
                              count2++;
                          }
@@ -88,6 +101,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.chosenDJ = [Singleton sharedInstance].currentDeejay;
+    NSLog(@"dj name: %@",self.chosenDJ.nickname);
     [self addCallbackOnSongs];
 }
 
@@ -96,6 +111,23 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Song *s = [self.chosenDJ.requestedSongs objectAtIndex:indexPath.row];
+    
+    //THERE IS YOUR SONG, LOOK AT SONG.H FOR ALL THE DATA
+    
+    
+    /*CGRect frame = CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.bounds.size.width, self.view.bounds.size.height * (6/8.));
+    QuestionPanel *qPanel = [[QuestionPanel alloc] initWithFrame:frame];
+    qPanel.delegate2 = self;
+    qPanel.djRealName = [Singleton sharedInstance].currentDeejay.realName;
+    qPanel.djNickname = [Singleton sharedInstance].currentDeejay.nickname;
+    [self.view addSubview:qPanel];
+    [qPanel showFromPoint:self.view.center];*/
+}
+
  
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -108,14 +140,17 @@
        cell = [[DJRequestCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier: simpleTableIdentifier];
     }
     //DATA FOR SONG HERE
-    cell.ArtistTextField.text = @"Sample";
+    Song *s = [self.chosenDJ.requestedSongs objectAtIndex:indexPath.row];
+    cell.ArtistTextField.text = s.artist;
+    cell.SongTitleTextField.text = s.songName;
     
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;//Number of cells
+    NSLog(@"count: %i", self.chosenDJ.requestedSongs.count);
+    return self.chosenDJ.requestedSongs.count;//Number of cells
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

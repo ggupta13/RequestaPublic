@@ -57,6 +57,7 @@
         
         //NSLog(@"in here, sending: %@",[self.listOfDJs objectAtIndex:self.chosenRow]);
     }
+    [Singleton sharedInstance].currentDeejay = (DeeJay *) [self.listOfDJs objectAtIndex:self.chosenRow];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

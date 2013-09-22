@@ -10,14 +10,12 @@
 
 @interface Song : NSObject
 
-@property NSString *album;
 @property NSString *artist;
 @property NSString *songName;
 @property NSString *song_id;
 @property double danceability;
 @property double duration;
 @property double energy;
-@property double key;
 @property double loudness;
 @property double tempo;
 @property NSUInteger votes;
