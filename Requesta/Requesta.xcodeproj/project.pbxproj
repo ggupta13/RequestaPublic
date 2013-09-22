@@ -67,6 +67,7 @@
 		EB86DA3117EE642F0017E2C9 /* SongSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA3017EE642F0017E2C9 /* SongSearchCell.xib */; };
 		EB86DA3417EE68FE0017E2C9 /* DJRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA3317EE68FE0017E2C9 /* DJRequestCell.m */; };
 		EB86DA3617EE69230017E2C9 /* DJRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA3517EE69230017E2C9 /* DJRequestCell.xib */; };
+		EB86DA3D17EE7B7A0017E2C9 /* DJRequestSongInfoPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA3C17EE7B7A0017E2C9 /* DJRequestSongInfoPanel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -161,6 +162,8 @@
 		EB86DA3517EE69230017E2C9 /* DJRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJRequestCell.xib; sourceTree = "<group>"; };
 		EB86DA3717EE72380017E2C9 /* BlueButtonBackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BlueButtonBackGround.png; path = ../../../Desktop/BlueButtonBackGround.png; sourceTree = "<group>"; };
 		EB86DA3917EE723E0017E2C9 /* OrangeButtonBackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OrangeButtonBackGround.png; path = ../../../Desktop/OrangeButtonBackGround.png; sourceTree = "<group>"; };
+		EB86DA3B17EE7B7A0017E2C9 /* DJRequestSongInfoPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJRequestSongInfoPanel.h; sourceTree = "<group>"; };
+		EB86DA3C17EE7B7A0017E2C9 /* DJRequestSongInfoPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJRequestSongInfoPanel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +246,8 @@
 				EB86DA3217EE68FE0017E2C9 /* DJRequestCell.h */,
 				EB86DA3317EE68FE0017E2C9 /* DJRequestCell.m */,
 				EB86DA3517EE69230017E2C9 /* DJRequestCell.xib */,
+				EB86DA3B17EE7B7A0017E2C9 /* DJRequestSongInfoPanel.h */,
+				EB86DA3C17EE7B7A0017E2C9 /* DJRequestSongInfoPanel.m */,
 				EB86DA0317EE0ED30017E2C9 /* UserNewSongRequestViewController.h */,
 				EB86DA0417EE0ED30017E2C9 /* UserNewSongRequestViewController.m */,
 				EB86DA2D17EE640C0017E2C9 /* SongSearchCell.h */,
@@ -473,6 +478,7 @@
 				ACDD6D1317EE4B9000EEDC5C /* QuestionPanel.m in Sources */,
 				EB86DA2F17EE640C0017E2C9 /* SongSearchCell.m in Sources */,
 				EB86DA3417EE68FE0017E2C9 /* DJRequestCell.m in Sources */,
+				EB86DA3D17EE7B7A0017E2C9 /* DJRequestSongInfoPanel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

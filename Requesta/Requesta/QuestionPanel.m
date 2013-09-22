@@ -21,7 +21,6 @@
         self.songTitle.textAlignment = NSTextAlignmentCenter;
         [self.songTitle setFont:[UIFont fontWithName:@"Eurostile" size:18.0f]];
         [self.songTitle setTextColor:[UIColor whiteColor]];
-        self.songTitle.text=@"LONG TEXT TEST";
         
         self.songArtist = [[UITextView alloc] initWithFrame:CGRectMake(40, 75, 240, 110)];
         [self addSubview:self.songArtist];
@@ -29,7 +28,6 @@
         self.songArtist.textAlignment = NSTextAlignmentCenter;
         [self.songArtist setFont:[UIFont fontWithName:@"Eurostile" size:18.0f]];
         [self.songArtist setTextColor:[UIColor whiteColor]];
-        self.songArtist.text=@"LONG TEXT TEST31311313";
         
         self.requestButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.requestButton setFrame:CGRectMake(70, 200, 180, 60)];

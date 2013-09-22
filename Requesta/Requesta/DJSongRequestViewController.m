@@ -13,7 +13,7 @@
 #import "Song.h"
 #import "Singleton.h"
 #import "QuestionPanel.h"
-
+#import "DJRequestSongInfoPanel.h"
 @interface DJSongRequestViewController ()
 
 @end
@@ -119,13 +119,28 @@
     //THERE IS YOUR SONG, LOOK AT SONG.H FOR ALL THE DATA
     
     
-    /*CGRect frame = CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.bounds.size.width, self.view.bounds.size.height * (6/8.));
-    QuestionPanel *qPanel = [[QuestionPanel alloc] initWithFrame:frame];
+    CGRect frame = CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.bounds.size.width, self.view.bounds.size.height * (7/8.));
+    DJRequestSongInfoPanel *qPanel = [[DJRequestSongInfoPanel alloc] initWithFrame:frame];
     qPanel.delegate2 = self;
     qPanel.djRealName = [Singleton sharedInstance].currentDeejay.realName;
     qPanel.djNickname = [Singleton sharedInstance].currentDeejay.nickname;
+    qPanel.songTitle.text = s.songName;
+    qPanel.songArtist.text = s.artist;
+    [qPanel.requestButton setFrame: CGRectMake(0,0,0,0)];
     [self.view addSubview:qPanel];
-    [qPanel showFromPoint:self.view.center];*/
+    //qPanel.tempo.text
+    [qPanel showFromPoint:self.view.center];
+    
+    
+    
+    /*
+    @property (nonatomic, strong) UITextView *tempo;
+    @property (nonatomic, strong) UITextView *hotttness;
+    @property (nonatomic, strong) UITextView *danceability;
+    @property (nonatomic, strong) UITextView *duration;
+    @property (nonatomic, strong) UITextView *energy;
+    @property (nonatomic, strong) UITextView *loudness;
+    @property (nonatomic, strong) UITextView *votes;*/
 }
 
  
