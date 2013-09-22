@@ -134,8 +134,12 @@
     qPanel.djNickname = [Singleton sharedInstance].currentDeejay.nickname;
     qPanel.songTitle.text = s.songName;
     qPanel.songArtist.text = s.artist;
-    qPanel.tempo = [NSString stringWithFormat:@"%i",(int)s.tempo];
-    qPanel.votes = [NSString stringWithFormat:@"%i",s.votes];
+    qPanel.tempo.text = [NSString stringWithFormat:@"Tempo: %i",(int)s.tempo];
+    qPanel.votes.text = [NSString stringWithFormat:@"Votes: %i",s.votes];
+    qPanel.danceability.text = [NSString stringWithFormat:@"Danceability: %i%%",(int)((s.danceability/1.0)*100)];
+    qPanel.loudness.text = [NSString stringWithFormat:@"Loudness: %i dB",(int)s.loudness];
+    qPanel.energy.text = [NSString stringWithFormat:@"Energy: %i%%",(int)((s.energy/1.0)*100)];
+    qPanel.duration.text = [NSString stringWithFormat:@"Length: %i:%i",(int)s.duration/60, (int)(s.duration - (int)s.duration/60*60)];
     [qPanel.requestButton removeFromSuperview];
     [qPanel showFromPoint:self.view.center];
     [self.view addSubview:qPanel];
