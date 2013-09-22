@@ -50,6 +50,8 @@
 		ACDD6D1317EE4B9000EEDC5C /* QuestionPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDD6D1217EE4B9000EEDC5C /* QuestionPanel.m */; };
 		ACDD6D1617EE572400EEDC5C /* VoteArrowOrange.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6D1417EE572400EEDC5C /* VoteArrowOrange.png */; };
 		ACDD6D1717EE572400EEDC5C /* VoteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6D1517EE572400EEDC5C /* VoteArrow.png */; };
+		ACDD6D1917EE74C800EEDC5C /* BlueButtonBackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6D1817EE74C800EEDC5C /* BlueButtonBackGround.png */; };
+		ACDD6D1B17EE74D000EEDC5C /* OrangeButtonBackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDD6D1A17EE74D000EEDC5C /* OrangeButtonBackGround.png */; };
 		EB86D9FF17EE07000017E2C9 /* OpenScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86D9FE17EE07000017E2C9 /* OpenScreenViewController.m */; };
 		EB86DA0217EE0DF60017E2C9 /* UserSongsRequestedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0117EE0DF60017E2C9 /* UserSongsRequestedViewController.m */; };
 		EB86DA0517EE0ED30017E2C9 /* UserNewSongRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA0417EE0ED30017E2C9 /* UserNewSongRequestViewController.m */; };
@@ -65,8 +67,6 @@
 		EB86DA3117EE642F0017E2C9 /* SongSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA3017EE642F0017E2C9 /* SongSearchCell.xib */; };
 		EB86DA3417EE68FE0017E2C9 /* DJRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA3317EE68FE0017E2C9 /* DJRequestCell.m */; };
 		EB86DA3617EE69230017E2C9 /* DJRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA3517EE69230017E2C9 /* DJRequestCell.xib */; };
-		EB86DA3817EE72380017E2C9 /* BlueButtonBackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA3717EE72380017E2C9 /* BlueButtonBackGround.png */; };
-		EB86DA3A17EE723E0017E2C9 /* OrangeButtonBackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA3917EE723E0017E2C9 /* OrangeButtonBackGround.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +130,8 @@
 		ACDD6D1217EE4B9000EEDC5C /* QuestionPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionPanel.m; sourceTree = "<group>"; };
 		ACDD6D1417EE572400EEDC5C /* VoteArrowOrange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VoteArrowOrange.png; sourceTree = "<group>"; };
 		ACDD6D1517EE572400EEDC5C /* VoteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VoteArrow.png; sourceTree = "<group>"; };
+		ACDD6D1817EE74C800EEDC5C /* BlueButtonBackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueButtonBackGround.png; sourceTree = "<group>"; };
+		ACDD6D1A17EE74D000EEDC5C /* OrangeButtonBackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OrangeButtonBackGround.png; sourceTree = "<group>"; };
 		EB86D9FD17EE07000017E2C9 /* OpenScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenScreenViewController.h; sourceTree = "<group>"; };
 		EB86D9FE17EE07000017E2C9 /* OpenScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenScreenViewController.m; sourceTree = "<group>"; };
 		EB86DA0017EE0DF60017E2C9 /* UserSongsRequestedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSongsRequestedViewController.h; sourceTree = "<group>"; };
@@ -268,7 +270,9 @@
 			isa = PBXGroup;
 			children = (
 				EB86DA3917EE723E0017E2C9 /* OrangeButtonBackGround.png */,
+				ACDD6D1A17EE74D000EEDC5C /* OrangeButtonBackGround.png */,
 				EB86DA3717EE72380017E2C9 /* BlueButtonBackGround.png */,
+				ACDD6D1817EE74C800EEDC5C /* BlueButtonBackGround.png */,
 				ACDD6D1417EE572400EEDC5C /* VoteArrowOrange.png */,
 				ACDD6D1517EE572400EEDC5C /* VoteArrow.png */,
 				ACDD6D0F17EE43B900EEDC5C /* CellBackground2.png */,
@@ -432,8 +436,8 @@
 				ACDD6D1717EE572400EEDC5C /* VoteArrow.png in Resources */,
 				EB86DA3117EE642F0017E2C9 /* SongSearchCell.xib in Resources */,
 				EB86DA3617EE69230017E2C9 /* DJRequestCell.xib in Resources */,
-				EB86DA3817EE72380017E2C9 /* BlueButtonBackGround.png in Resources */,
-				EB86DA3A17EE723E0017E2C9 /* OrangeButtonBackGround.png in Resources */,
+				ACDD6D1917EE74C800EEDC5C /* BlueButtonBackGround.png in Resources */,
+				ACDD6D1B17EE74D000EEDC5C /* OrangeButtonBackGround.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
