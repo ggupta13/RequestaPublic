@@ -158,9 +158,9 @@
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MCAwAA</bytes>
 								</object>
-								<object class="NSCustomResource" key="IBUINormalImage" id="413054299">
+								<object class="NSCustomResource" key="IBUINormalImage">
 									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">VoteArrow.png</string>
+									<string key="NSResourceName">fixedBlueButton.png</string>
 								</object>
 								<object class="IBUIFontDescription" key="IBUIFontDescription" id="475622914">
 									<int key="type">2</int>
@@ -214,7 +214,10 @@
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MC41AA</bytes>
 				</object>
-				<reference key="IBUINormalImage" ref="413054299"/>
+				<object class="NSCustomResource" key="IBUINormalImage">
+					<string key="NSClassName">NSImage</string>
+					<string key="NSResourceName">VoteArrow.png</string>
+				</object>
 				<reference key="IBUIFontDescription" ref="475622914"/>
 				<reference key="IBUIFont" ref="147118013"/>
 			</object>
@@ -849,6 +852,7 @@
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="CellBackground2.png">{320, 70}</string>
 			<string key="VoteArrow.png">{70, 70}</string>
+			<string key="fixedBlueButton.png">{120, 120}</string>
 		</dictionary>
 		<bool key="IBDocument.UseAutolayout">YES</bool>
 		<string key="IBCocoaTouchPluginVersion">2083</string>

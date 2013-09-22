@@ -488,68 +488,6 @@
     <resources>
         <image name="BlueButtonBackGround.png" width="400" height="70"/>
     </resources>
-    <classes>
-        <class className="DJLoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DJLoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="LoginButtonPressed:"/>
-                <relationship kind="outlet" name="PasswordTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="UsernameTextFieldOutlet" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="areYouDJLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="passwordLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="passwordTextFieldOutlet" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="signUpButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="usernameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="DJSignUpViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DJSignUpViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="SignUpButtonPressed:"/>
-                <relationship kind="outlet" name="DJNameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="LocationTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="PasswordTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="RealNameTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="DJSongRequestViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DJSongRequestViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="SongRequestTableOutlet" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="OpenScreenViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/OpenScreenViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="DJSignInButtonPressed:"/>
-                <relationship kind="outlet" name="DJSignInButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="SelectDJTableViewOutlet" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="UserNewSongRequestViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserNewSongRequestViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="SearchButtonPressed:"/>
-                <relationship kind="action" name="cancelPressed:"/>
-                <relationship kind="outlet" name="MusicSearchTextFieldOutlet" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="SearchResultTableOutlet" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="cancelButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="searchButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="UserSongsRequestedViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserSongsRequestedViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="RequestNewSongButtonPressed:"/>
-                <relationship kind="outlet" name="UserSongRequestedTableOutlet" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="requestButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
