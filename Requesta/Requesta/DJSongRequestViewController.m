@@ -126,10 +126,12 @@
     qPanel.djNickname = [Singleton sharedInstance].currentDeejay.nickname;
     qPanel.songTitle.text = s.songName;
     qPanel.songArtist.text = s.artist;
-    [qPanel.requestButton setFrame: CGRectMake(0,0,0,0)];
-    [self.view addSubview:qPanel];
-    //qPanel.tempo.text
+   
     [qPanel showFromPoint:self.view.center];
+    
+    
+    
+    
     
     
     
