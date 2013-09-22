@@ -27,6 +27,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    UIFont *euro = [UIFont fontWithName:@"Eurostile" size:18.0f];
+    self.RealNameTextField.font = euro;
+    self.DJNameTextField.font = euro;
+    self.LocationTextField.font = euro;
+    self.PasswordTextField.font = euro;
+    self.realnameLabel.font = euro;
+    self.djNameLabel.font=euro;
+    self.locationLabel.font = euro;
+    self.passwordLabel.font = euro;
+    self.signupButton.font = euro;
+    
 }
 
 - (void)didReceiveMemoryWarning
