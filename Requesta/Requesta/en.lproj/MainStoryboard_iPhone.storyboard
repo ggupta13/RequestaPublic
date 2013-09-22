@@ -317,9 +317,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="sBH-Jm-9pU" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="AZi-kV-2FR"/>
+                            <constraint firstItem="sBH-Jm-9pU" firstAttribute="trailing" secondItem="5P2-lL-dvl" secondAttribute="trailing" type="default" id="EH3-g7-w81"/>
+                            <constraint firstItem="sBH-Jm-9pU" firstAttribute="leading" secondItem="5P2-lL-dvl" secondAttribute="leading" type="default" id="Iwb-dv-Dha"/>
                             <constraint firstItem="sBH-Jm-9pU" firstAttribute="top" secondItem="5P2-lL-dvl" secondAttribute="top" constant="20" symbolic="YES" type="default" id="keT-pT-Nfh"/>
-                            <constraint firstAttribute="trailing" secondItem="sBH-Jm-9pU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="koX-K1-Vz5"/>
-                            <constraint firstItem="sBH-Jm-9pU" firstAttribute="leading" secondItem="5P2-lL-dvl" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="oLZ-Lg-lKz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Requested Songs" id="BeN-1J-JRz"/>

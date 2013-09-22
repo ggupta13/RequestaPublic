@@ -7,6 +7,7 @@
 //
 
 #import "DJSongRequestViewController.h"
+#import "DJRequestCell.h"
 
 @interface DJSongRequestViewController ()
 
@@ -39,19 +40,26 @@
 {
     static NSString *simpleTableIdentifier = @"SimpleTableItem";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+     DJRequestCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+       cell = [[DJRequestCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier: simpleTableIdentifier];
     }
+    //DATA FOR SONG HERE
+    cell.ArtistTextField.text = @"Sample";
     
-    cell.textLabel.text = @"Sample";
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 1;//Number of cells
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 70;
 }
 
 @end

@@ -63,6 +63,8 @@
 		EB86DA2A17EE4A380017E2C9 /* UserVoteRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA2917EE4A380017E2C9 /* UserVoteRequestCell.xib */; };
 		EB86DA2F17EE640C0017E2C9 /* SongSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA2E17EE640C0017E2C9 /* SongSearchCell.m */; };
 		EB86DA3117EE642F0017E2C9 /* SongSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA3017EE642F0017E2C9 /* SongSearchCell.xib */; };
+		EB86DA3417EE68FE0017E2C9 /* DJRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA3317EE68FE0017E2C9 /* DJRequestCell.m */; };
+		EB86DA3617EE69230017E2C9 /* DJRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA3517EE69230017E2C9 /* DJRequestCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,6 +152,9 @@
 		EB86DA2D17EE640C0017E2C9 /* SongSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongSearchCell.h; sourceTree = "<group>"; };
 		EB86DA2E17EE640C0017E2C9 /* SongSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongSearchCell.m; sourceTree = "<group>"; };
 		EB86DA3017EE642F0017E2C9 /* SongSearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongSearchCell.xib; sourceTree = "<group>"; };
+		EB86DA3217EE68FE0017E2C9 /* DJRequestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJRequestCell.h; sourceTree = "<group>"; };
+		EB86DA3317EE68FE0017E2C9 /* DJRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJRequestCell.m; sourceTree = "<group>"; };
+		EB86DA3517EE69230017E2C9 /* DJRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJRequestCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +234,9 @@
 				EB86DA1617EE18F10017E2C9 /* DJSignUpViewController.m */,
 				EB86DA0917EE11390017E2C9 /* DJSongRequestViewController.h */,
 				EB86DA0A17EE11390017E2C9 /* DJSongRequestViewController.m */,
+				EB86DA3217EE68FE0017E2C9 /* DJRequestCell.h */,
+				EB86DA3317EE68FE0017E2C9 /* DJRequestCell.m */,
+				EB86DA3517EE69230017E2C9 /* DJRequestCell.xib */,
 				EB86DA0317EE0ED30017E2C9 /* UserNewSongRequestViewController.h */,
 				EB86DA0417EE0ED30017E2C9 /* UserNewSongRequestViewController.m */,
 				EB86DA2D17EE640C0017E2C9 /* SongSearchCell.h */,
@@ -417,6 +425,7 @@
 				ACDD6D1617EE572400EEDC5C /* VoteArrowOrange.png in Resources */,
 				ACDD6D1717EE572400EEDC5C /* VoteArrow.png in Resources */,
 				EB86DA3117EE642F0017E2C9 /* SongSearchCell.xib in Resources */,
+				EB86DA3617EE69230017E2C9 /* DJRequestCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +460,7 @@
 				EB86DA2617EE3B950017E2C9 /* UserVoteRequestCell.m in Sources */,
 				ACDD6D1317EE4B9000EEDC5C /* QuestionPanel.m in Sources */,
 				EB86DA2F17EE640C0017E2C9 /* SongSearchCell.m in Sources */,
+				EB86DA3417EE68FE0017E2C9 /* DJRequestCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

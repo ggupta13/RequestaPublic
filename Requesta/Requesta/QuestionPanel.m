@@ -33,7 +33,7 @@
         
         self.requestButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.requestButton setFrame:CGRectMake(70, 200, 180, 60)];
-        [self.requestButton setBackgroundColor:[UIColor colorWithRed:202.0/255 green:60.0/255 blue:60.0/255 alpha:1.0f]];
+        [self.requestButton setBackgroundColor:[UIColor colorWithRed:44.0/255 green:172.0/255 blue:205.0/255 alpha:1.0f]];
         [self.requestButton.titleLabel setFont:[UIFont fontWithName:@"Eurostile" size:16.0f]];
         [self addSubview:self.requestButton];
         [self.requestButton setTitle:@"Request" forState:UIControlStateNormal];

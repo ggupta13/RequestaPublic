@@ -151,7 +151,6 @@
         self.hasBeenPressed = YES;
         [self.VoteArrow setImage:[UIImage imageNamed: @"VoteArrowOrange.png"] forState: UIControlStateNormal];
 
-        [self.VoteArrow setBackgroundImage:[UIImage imageNamed: @"VoteArrowOrange.png"] forState: UIControlStateNormal];
         /*int currentVotes = [self.VoteCountTextField.text integerValue];
 >>>>>>> f64ba56b828477527ac270a225ebfaa77f07eb40
         currentVotes++;
