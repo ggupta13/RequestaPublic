@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DeeJay.h"
 
 @interface DJSongRequestViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *SongRequestTableOutlet;
+@property DeeJay *chosenDJ;
+
 @end
