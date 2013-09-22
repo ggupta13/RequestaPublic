@@ -11,6 +11,13 @@
 @interface DJLoginViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *UsernameTextFieldOutlet;
 @property (weak, nonatomic) IBOutlet UITextField *PasswordTextField;
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *passwordLabel;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextFieldOutlet;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UILabel *areYouDJLabel;
+@property (weak, nonatomic) IBOutlet UIButton *signUpButton;
 
-- (IBAction)LoginButtonPressed:(id)sender;
+
+
 @end

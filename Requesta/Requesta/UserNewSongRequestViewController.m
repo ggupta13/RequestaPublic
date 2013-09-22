@@ -248,6 +248,13 @@
     qPanel.song = [self.searchResults objectAtIndex:indexPath.row];
     qPanel.djRealName = [Singleton sharedInstance].currentDeejay.realName;
     qPanel.djNickname = [Singleton sharedInstance].currentDeejay.nickname;
+    
+    Song *s = [self.searchResults objectAtIndex:indexPath.row];
+    qPanel.songArtist.text = s.artist;
+    qPanel.songTitle.text = s.songName;
+    
+    
+    
     [self.view addSubview:qPanel];
     [qPanel showFromPoint:self.view.center];
 }
