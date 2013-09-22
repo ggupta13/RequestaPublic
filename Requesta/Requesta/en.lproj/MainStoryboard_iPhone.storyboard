@@ -52,6 +52,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Select a DJ" id="9H8-qh-u4L"/>
                     <connections>
+                        <outlet property="DJSignInButton" destination="h2s-EZ-e6A" id="IEQ-YZ-KgG"/>
                         <outlet property="SelectDJTableViewOutlet" destination="kmZ-jC-yvU" id="V0h-89-lkO"/>
                         <segue destination="p5s-u5-4jI" kind="push" identifier="SelectDJToUserQueue" id="WUZ-RF-708"/>
                     </connections>
@@ -497,6 +498,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/OpenScreenViewController.h"/>
             <relationships>
                 <relationship kind="action" name="DJSignInButtonPressed:"/>
+                <relationship kind="outlet" name="DJSignInButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="SelectDJTableViewOutlet" candidateClass="UITableView"/>
             </relationships>
         </class>

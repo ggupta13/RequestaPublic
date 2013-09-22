@@ -173,8 +173,19 @@
     
     self.listOfDJs = [NSMutableArray new];
     [self queryForDJs];
+    self.DJSignInButton.titleLabel.font = [UIFont fontWithName:@"Eurostile" size:18.0f];
         
 	// Do any additional setup after loading the view.
+    
+    UIColor *blue = [UIColor colorWithRed:44.0/255.0f green:172/255.0f blue:205/255.0f alpha:1.0f];
+    //[[UINavigationBar appearance] setTintColor:blue];
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:@{UITextAttributeFont:[UIFont fontWithName:@"Eurostile" size:22.0f]}];
+    self.navigationController.navigationBar.tintColor = blue;
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
+    [attributes setValue:[UIFont fontWithName:@"Eurostile" size:14.0f] forKey:UITextAttributeFont];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:attributes forState:UIControlStateNormal];
+    //44,172,205
 }
 
 - (void)didReceiveMemoryWarning

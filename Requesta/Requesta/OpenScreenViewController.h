@@ -11,6 +11,7 @@
 @interface OpenScreenViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *SelectDJTableViewOutlet;
 - (IBAction)DJSignInButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *DJSignInButton;
 
 @property NSMutableArray *listOfDJs;
 
