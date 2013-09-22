@@ -13,5 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *ArtistTextField;
 @property (weak, nonatomic) IBOutlet UILabel *BPMTextField;
 @property (weak, nonatomic) IBOutlet UILabel *BPMDigitsTextField;
+@property (weak, nonatomic) IBOutlet UILabel *VotesTextField;
+@property (weak, nonatomic) IBOutlet UILabel *VotesTitleTextField;
 
 @end

@@ -144,6 +144,14 @@
     cell.ArtistTextField.text = s.artist;
     cell.SongTitleTextField.text = s.songName;
     cell.BPMDigitsTextField.text = [NSString stringWithFormat:@"%i", (int)s.tempo];
+    cell.VotesTextField.text = [NSString stringWithFormat:@"%i",s.votes];
+    cell.ArtistTextField.font = [UIFont fontWithName:@"Eurostile" size:20.0f];
+    cell.SongTitleTextField.font = [UIFont fontWithName:@"Eurostile" size:27.0f];
+    cell.VotesTextField.font = [UIFont fontWithName:@"Eurostile" size:20.0f];
+    cell.BPMDigitsTextField.font = [UIFont fontWithName:@"Eurostile" size:20.0f];
+    cell.VotesTitleTextField.font = [UIFont fontWithName:@"Eurostile" size:20.0f];
+    
+    
     
     return cell;
 }
