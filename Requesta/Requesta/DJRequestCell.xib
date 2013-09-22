@@ -135,7 +135,6 @@
 								<string key="NSFrame">{{268, 36}, {42, 28}}</string>
 								<reference key="NSSuperview" ref="5747657"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -146,6 +145,7 @@
 								<reference key="IBUITextColor" ref="690174371"/>
 								<reference key="IBUIHighlightedColor" ref="690174371"/>
 								<int key="IBUIBaselineAdjustment">0</int>
+								<int key="IBUITextAlignment">1</int>
 								<reference key="IBUIFontDescription" ref="905724721"/>
 								<reference key="IBUIFont" ref="1072448489"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>

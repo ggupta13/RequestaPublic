@@ -143,6 +143,7 @@
     Song *s = [self.chosenDJ.requestedSongs objectAtIndex:indexPath.row];
     cell.ArtistTextField.text = s.artist;
     cell.SongTitleTextField.text = s.songName;
+    cell.BPMDigitsTextField.text = [NSString stringWithFormat:@"%i", (int)s.tempo];
     
     return cell;
 }
