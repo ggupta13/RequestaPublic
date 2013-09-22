@@ -65,6 +65,8 @@
 		EB86DA3117EE642F0017E2C9 /* SongSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA3017EE642F0017E2C9 /* SongSearchCell.xib */; };
 		EB86DA3417EE68FE0017E2C9 /* DJRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA3317EE68FE0017E2C9 /* DJRequestCell.m */; };
 		EB86DA3617EE69230017E2C9 /* DJRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA3517EE69230017E2C9 /* DJRequestCell.xib */; };
+		EB86DA3817EE72380017E2C9 /* BlueButtonBackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA3717EE72380017E2C9 /* BlueButtonBackGround.png */; };
+		EB86DA3A17EE723E0017E2C9 /* OrangeButtonBackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA3917EE723E0017E2C9 /* OrangeButtonBackGround.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +157,8 @@
 		EB86DA3217EE68FE0017E2C9 /* DJRequestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJRequestCell.h; sourceTree = "<group>"; };
 		EB86DA3317EE68FE0017E2C9 /* DJRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJRequestCell.m; sourceTree = "<group>"; };
 		EB86DA3517EE69230017E2C9 /* DJRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJRequestCell.xib; sourceTree = "<group>"; };
+		EB86DA3717EE72380017E2C9 /* BlueButtonBackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BlueButtonBackGround.png; path = ../../../Desktop/BlueButtonBackGround.png; sourceTree = "<group>"; };
+		EB86DA3917EE723E0017E2C9 /* OrangeButtonBackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OrangeButtonBackGround.png; path = ../../../Desktop/OrangeButtonBackGround.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +267,8 @@
 		ACC718FE17EDE49100F9833E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EB86DA3917EE723E0017E2C9 /* OrangeButtonBackGround.png */,
+				EB86DA3717EE72380017E2C9 /* BlueButtonBackGround.png */,
 				ACDD6D1417EE572400EEDC5C /* VoteArrowOrange.png */,
 				ACDD6D1517EE572400EEDC5C /* VoteArrow.png */,
 				ACDD6D0F17EE43B900EEDC5C /* CellBackground2.png */,
@@ -426,6 +432,8 @@
 				ACDD6D1717EE572400EEDC5C /* VoteArrow.png in Resources */,
 				EB86DA3117EE642F0017E2C9 /* SongSearchCell.xib in Resources */,
 				EB86DA3617EE69230017E2C9 /* DJRequestCell.xib in Resources */,
+				EB86DA3817EE72380017E2C9 /* BlueButtonBackGround.png in Resources */,
+				EB86DA3A17EE723E0017E2C9 /* OrangeButtonBackGround.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
