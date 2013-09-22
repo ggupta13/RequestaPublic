@@ -20,7 +20,7 @@
         NSArray *nibArray = [[NSBundle mainBundle] loadNibNamed:@"DJChoiceCell" owner:self options:nil];
         self = [nibArray objectAtIndex:0];
     }
-    return self;
+    return self; 
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

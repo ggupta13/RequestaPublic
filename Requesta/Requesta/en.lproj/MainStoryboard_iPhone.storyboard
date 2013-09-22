@@ -510,6 +510,7 @@
     <resources>
         <image name="BlueButtonBackGround.png" width="400" height="70"/>
     </resources>
+<<<<<<< HEAD
     <classes>
         <class className="DJLoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DJLoginViewController.h"/>
@@ -577,6 +578,7 @@
             </relationships>
         </class>
     </classes>
+
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
