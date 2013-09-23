@@ -74,6 +74,7 @@
 		EB86DA3617EE69230017E2C9 /* DJRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA3517EE69230017E2C9 /* DJRequestCell.xib */; };
 		EB86DA3D17EE7B7A0017E2C9 /* DJRequestSongInfoPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB86DA3C17EE7B7A0017E2C9 /* DJRequestSongInfoPanel.m */; };
 		EB86DA4517EE91070017E2C9 /* RequestaLogo57by57.png in Resources */ = {isa = PBXBuildFile; fileRef = EB86DA4417EE91070017E2C9 /* RequestaLogo57by57.png */; };
+		EBA8F99217EFABA900FA3C31 /* Notes on Color in Resources */ = {isa = PBXBuildFile; fileRef = EBA8F99117EFABA900FA3C31 /* Notes on Color */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +179,7 @@
 		EB86DA4217EE90D00017E2C9 /* RequestaLogo57by57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RequestaLogo57by57.png; path = ../../../../../Desktop/RequestaLogo57by57.png; sourceTree = "<group>"; };
 		EB86DA4417EE91070017E2C9 /* RequestaLogo57by57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RequestaLogo57by57.png; sourceTree = "<group>"; };
 		EBA8F98F17EE950000FA3C31 /* fixedBlueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fixedBlueButton.png; path = ../../../Documents/fixedBlueButton.png; sourceTree = "<group>"; };
+		EBA8F99117EFABA900FA3C31 /* Notes on Color */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Notes on Color"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,7 @@
 		ACC718FE17EDE49100F9833E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EBA8F99117EFABA900FA3C31 /* Notes on Color */,
 				ACDD6D2417EE97BB00EEDC5C /* fixedBlueButton.png */,
 				EBA8F98F17EE950000FA3C31 /* fixedBlueButton.png */,
 				ACDD6D2017EE928B00EEDC5C /* RequestaLogo57by57.png */,
@@ -471,6 +474,7 @@
 				ACDD6D2217EE928B00EEDC5C /* RequestaLogo57by57.png in Resources */,
 				ACDD6D2317EE928B00EEDC5C /* RequestaLogo114by114.png in Resources */,
 				ACDD6D2517EE97BB00EEDC5C /* fixedBlueButton.png in Resources */,
+				EBA8F99217EFABA900FA3C31 /* Notes on Color in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
