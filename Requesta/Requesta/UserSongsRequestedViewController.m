@@ -13,7 +13,7 @@
 #import "Singleton.h"
 
 @interface UserSongsRequestedViewController ()
-
+@property BOOL alreadyVoted;
 @end
 
 @implementation UserSongsRequestedViewController
@@ -140,7 +140,13 @@
     cell.VoteCountTextField.text = [NSString stringWithFormat:@"%i",s.votes];
     cell.VoteCountTextField.font = [UIFont fontWithName:@"Eurostile" size:30.0f];
     cell.hasBeenPressed = false;
+   
     return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return NO;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
