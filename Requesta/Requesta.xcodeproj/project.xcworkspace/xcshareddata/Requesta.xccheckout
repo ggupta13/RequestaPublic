@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>24CB5AD2-29EF-4607-AC59-F82FA6809D6F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Requesta</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C0CD86C5-38D2-4510-B8D7-0C49EFFBD3BA</key>
+		<string>https://github.com/ggupta13/RequestaPublic.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Requesta/Requesta.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C0CD86C5-38D2-4510-B8D7-0C49EFFBD3BA</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ggupta13/RequestaPublic.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C0CD86C5-38D2-4510-B8D7-0C49EFFBD3BA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C0CD86C5-38D2-4510-B8D7-0C49EFFBD3BA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RequestaPublic</string>
+		</dict>
+	</array>
+</dict>
+</plist>

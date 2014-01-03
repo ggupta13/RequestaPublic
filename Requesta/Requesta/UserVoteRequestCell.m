@@ -171,8 +171,13 @@
         NSLog(@"%i",currentVotes);
         self.VoteCountTextField.text = [NSString stringWithFormat:@"%d",currentVotes];
         
+<<<<<<< HEAD
 
          NSIndexPath *myIndexPath = [(UITableView *)self.superview.superview indexPathForCell: self];
+=======
+        NSIndexPath *myIndexPath = [(UITableView *)self.superview.superview indexPathForCell: self];
+         
+>>>>>>> 7b419c25bea3384d42630303fcaeb1b62c21381b
         
         Song *s = [[Singleton sharedInstance].currRequestedSongs objectAtIndex:myIndexPath.row];
         NSLog(@"name: %@",s.songName);
