@@ -152,19 +152,26 @@
 
 
 - (IBAction)VoteArrowPressed:(id)sender {
-    //[self.VoteArrow setImage :[UIImage imageNamed: @"VoteArrowOrange.png"] forState: UIControlStateNormal];
-    //[self.VoteArrow setImage :[UIImage imageNamed: @"VoteArrowOrange.png"] forState: UIControlStateSelected];
+    [self.VoteArrow setImage :[UIImage imageNamed: @"VoteArrowOrange.png"] forState: UIControlStateNormal];
+    [self.VoteArrow setImage :[UIImage imageNamed: @"VoteArrowOrange.png"] forState: UIControlStateSelected];
+    /*
+    NSDictionary *dd = [[NSDictionary alloc]init];
+    [dd setValue:@"hi" forKey:@"jon"];
+    [dd setValue:@"asdfasdf" forKey:@"jon"];
+    NSLog(@"this is jon's value: %@",[dd objectForKey:@"jon"]);
+     */
+    
     if(!self.hasBeenPressed)
     {
         self.hasBeenPressed = YES;
-        //[self.VoteArrow setBackgroundImage :[UIImage imageNamed: @"VoteArrowOrange.png"] forState: UIControlStateNormal];
+        [self.VoteArrow setBackgroundImage :[UIImage imageNamed: @"VoteArrowOrange.png"] forState: UIControlStateNormal];
 
-        /*int currentVotes = [self.VoteCountTextField.text integerValue];
->>>>>>> f64ba56b828477527ac270a225ebfaa77f07eb40
+        int currentVotes = [self.VoteCountTextField.text integerValue];
         currentVotes++;
-        self.VoteCountTextField.text = [NSString stringWithFormat:@"%d",currentVotes];*/
+        NSLog(@"%i",currentVotes);
+        self.VoteCountTextField.text = [NSString stringWithFormat:@"%d",currentVotes];
         
-         NSIndexPath *myIndexPath = [(UITableView *)self.superview indexPathForCell: self];
+        NSIndexPath *myIndexPath = [(UITableView *)self.superview.superview indexPathForCell: self];
         
         Song *s = [[Singleton sharedInstance].currRequestedSongs objectAtIndex:myIndexPath.row];
         NSLog(@"name: %@",s.songName);
